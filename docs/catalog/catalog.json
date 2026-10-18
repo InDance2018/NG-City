@@ -1,0 +1,86 @@
+{
+  "de": {
+    "tag": "PROJEKTKATALOG · PLANUNGSSTAND",
+    "title": "Die Grundlage für deine Stadt.",
+    "intro": "NG-City soll die gemeinsame Grundlage für die NeverGate-Stadt und ihr Wirtschaftssystem bilden. Verkehr, Fahrzeuge und spätere Erweiterungen können daran angebunden werden.",
+    "status": "Planung · 18.10.2026 · Kein Mod-Build verfügbar",
+    "sections": [
+      [
+        "01 / Ziel",
+        "Eine vollständige Minecraft-Stadt schrittweise aufbauen: NG-City verbindet die wirtschaftlichen Vorgänge der beteiligten NG-Projekte über eine gemeinsame Grundlage."
+      ],
+      [
+        "02 / Drei eigenständige Mods",
+        "NG-City, NG-Verkehr und NG-Fahrzeuge bleiben getrennte Projekte und JAR-Dateien. NG-Verkehr und NG-Fahrzeuge müssen ohne NG-City selbständig funktionieren."
+      ],
+      [
+        "03 / Wirtschaft nur mit NG-City",
+        "Wirtschaftsfunktionen greifen ausschließlich, wenn NG-City tatsächlich installiert und die Anbindung verfügbar ist. Ohne NG-City gibt es in Verkehr und Fahrzeuge keine aktiven Geldkonten, wirtschaftlichen Preise, Gebühren, Zahlungen oder Ersatzwährung."
+      ],
+      [
+        "04 / Gemeinsame Zuständigkeiten",
+        "NG-City verwaltet die zentrale Wirtschaftsgrundlage. NG-Verkehr liefert Straßen und Verkehrstechnik; NG-Fahrzeuge liefert Fahrzeuge und deren Funktionen. Konten und Geldbewegungen werden nicht in jeder Mod parallel geführt."
+      ],
+      [
+        "05 / Beispiele für die spätere Anbindung",
+        "Ein Parkplatz aus NG-Verkehr könnte eine Zahlung über NG-City abwickeln. Ein Fahrzeugkauf könnte dieselbe zentrale Wirtschaft nutzen. Diese Beispiele sind keine bereits gebauten oder getesteten Funktionen."
+      ],
+      [
+        "06 / Was noch festzulegen ist",
+        "Erster Funktionsumfang, Währung, Startguthaben, Konten oder Bargeld, Grundstücke, Stadtverwaltung, Unternehmen und Berufe sind noch offen. Auch Schnittstelle, Speicherung und Verhalten bei Ausfall oder Entfernung von NG-City müssen vereinbart werden."
+      ]
+    ],
+    "checks": "Vor einer Freigabe sind die einzelnen Mods, Verkehr und Fahrzeuge gemeinsam ohne NG-City sowie alle drei Mods mit kompatibler Anbindung zu prüfen. Dazu gehören Mehrspieler, Neustart, dauerhafte Daten, fehlende Gegenstellen und der Schutz vor doppelten Zahlungen. Eine fehlgeschlagene oder unklare Zahlung darf nicht als bezahlt gelten.",
+    "limit": "Dieser Katalog dokumentiert die bestätigte Planung. Er ist keine Installations- oder Bedienungsanleitung für eine fertige Mod. Bestehende Verkehrs- und Fahrzeug-Builds sind damit noch nicht auf das neue Zielverhalten umgestellt.",
+    "testheading": "Spätere Prüfung und Freigabe",
+    "scopeheading": "Aktueller Stand",
+    "links": "Projekt und Kontakt",
+    "download": "PDF-Katalog herunterladen",
+    "nav": "Planung",
+    "more": "Weitere NG-Projekte",
+    "source": "Maßgebliche öffentliche Grundlagenplanung:",
+    "pdf": "NG-City-Katalog-DE.pdf"
+  },
+  "en": {
+    "tag": "PROJECT CATALOGUE · PLANNING STATUS",
+    "title": "The foundation for your city.",
+    "intro": "NG-City is intended to provide the shared foundation for the NeverGate city and its economy. Traffic, vehicles and future extensions can connect to it.",
+    "status": "Planning · 18 October 2026 · No mod build available",
+    "sections": [
+      [
+        "01 / Goal",
+        "Build a complete Minecraft city step by step: NG-City connects economic operations across participating NG projects through one shared foundation."
+      ],
+      [
+        "02 / Three independent mods",
+        "NG-City, NG-Verkehr and NG-Fahrzeuge remain separate projects and JAR files. NG-Verkehr and NG-Fahrzeuge must continue to work independently without NG-City."
+      ],
+      [
+        "03 / Economy requires NG-City",
+        "Economic features are active only when NG-City is actually installed and its integration is available. Without NG-City, the traffic and vehicle mods have no active money accounts, economic prices, fees, payments or substitute currency."
+      ],
+      [
+        "04 / Shared responsibilities",
+        "NG-City provides the central economic foundation. NG-Verkehr supplies roads and traffic technology; NG-Fahrzeuge supplies vehicles and vehicle features. Accounts and money movements are not maintained separately in every mod."
+      ],
+      [
+        "05 / Future integration examples",
+        "A parking facility from NG-Verkehr could process a payment through NG-City. A vehicle purchase could use the same central economy. These examples are not implemented or tested features."
+      ],
+      [
+        "06 / Decisions still open",
+        "The first feature scope, currency, starting balance, accounts or cash, land ownership, city administration, businesses and jobs remain undecided. The integration interface, persistence and behaviour when NG-City fails or is removed must also be agreed."
+      ]
+    ],
+    "checks": "Before approval, test the individual mods, traffic and vehicles together without NG-City, and all three mods with compatible integration. Include multiplayer, restarts, persistent data, missing counterparts and prevention of duplicate payments. A failed or uncertain payment must never be treated as paid.",
+    "limit": "This catalogue documents confirmed planning. It is not an installation or user manual for a finished mod. Existing traffic and vehicle builds have not automatically been adapted to the new target behaviour.",
+    "testheading": "Future testing and approval",
+    "scopeheading": "Current status",
+    "links": "Project and contact",
+    "download": "Download PDF catalogue",
+    "nav": "Planning",
+    "more": "More NG projects",
+    "source": "Authoritative public foundation plan:",
+    "pdf": "NG-City-Katalog-EN.pdf"
+  }
+}
