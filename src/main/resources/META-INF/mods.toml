@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[48,49)"
+license="All Rights Reserved"
+[[mods]]
+modId="ng_city"
+version="0.0.1-dev"
+displayName="NG-City"
+authors="NeverGate"
+displayURL="https://nevergate.de/ng-city/"
+description='''Begehbare Stadtgebäude: Bank, Hotel und Ankauf mit Mitarbeitern und Startkiste. Erste Entwicklungsversion; Wirtschaft noch nicht aktiviert.'''
+[[dependencies.ng_city]]
+modId="forge"
+mandatory=true
+versionRange="[48.1.0,49)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.ng_city]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.2,1.20.3)"
+ordering="NONE"
+side="BOTH"

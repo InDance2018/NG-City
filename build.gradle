@@ -1,0 +1,28 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '6.0.24'
+}
+version = '0.0.1-dev'
+group = 'de.nevergate.city'
+base { archivesName = 'ng_city-1.20.2' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+minecraft {
+    mappings channel: 'official', version: '1.20.2'
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            mods { ng_city { source sourceSets.main } }
+        }
+        server { args '--nogui' }
+        client { }
+        gameTestServer { property 'forge.enabledGameTestNamespaces', 'ng_city' }
+    }
+}
+repositories { mavenCentral() }
+dependencies { minecraft 'net.minecraftforge:forge:1.20.2-48.1.0' }
+if (project.hasProperty('cityQA')) { sourceSets.main.java.srcDir 'src/qa/java'; sourceSets.main.resources.srcDir 'src/qa/resources' }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.named('jar', Jar).configure {
+    archiveVersion = 'dev-0.0.1'
+    manifest.attributes('Implementation-Version': project.version)
+    finalizedBy 'reobfJar'
+}

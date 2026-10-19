@@ -1,6 +1,6 @@
 # NG-City · Grundlagenplanung
 
-Stand: 18.10.2026. Quelle: ausdrückliche Eigentümerentscheidungen im NG-City-Planungsgespräch vom 18.10.2026. Status: Planung; keine Mod-Implementierung, kein Build und keine Installation beauftragt.
+Stand: 18.10.2026. Quelle: ausdrückliche Eigentümerentscheidungen im NG-City-Planungsgespräch vom 18.10.2026. Historischer Ausgangsstand: Planung vom 18.10.2026. Neuer Bauauftrag vom 19.10.2026 siehe unten.
 
 ## Ziel
 
@@ -36,3 +36,18 @@ Bei vorhandener NG-City, aber fehlgeschlagener oder unklarer Zahlung darf kein V
 ## Späterer Prüfumfang
 
 NG-Verkehr allein, NG-Fahrzeuge allein, beide ohne NG-City sowie beide mit kompatibler NG-City prüfen. Außerdem fehlende/inkompatible Gegenstelle, Mehrspieler, doppelte Zahlungen, Neustart und persistente Daten gesondert prüfen. Bisher wurde durch diese Planungsablage kein solcher Test durchgeführt.
+
+## Beauftragter erster Bauumfang · 19.10.2026
+
+Quelle: ausdrücklicher Eigentümerauftrag im NG-City-Gespräch am 19.10.2026.
+Minecraft 1.20.2 / Forge 48.1.0, Java 17, Version `dev-0.0.1`.
+
+- Startkiste mit drei Gebäudepaketen und lesbarer Bedienungsanleitung.
+- Kompakte, fertig platzierbare, begehbare Bank, Hotel und Ankauf.
+- Inneneinrichtung und je ein interaktiver Mitarbeiter.
+- Platzierung in vier Richtungen mit Prüfung auf freien, geladenen, getragenen Bauplatz, Weltgrenze, Bauhöhe und Baurechte; kein Überschreiben bestehender Gebäude.
+- Bank mit Schalter/Tresorbereich, Hotel mit Rezeption, Innentreppe und zwei Zimmern, Ankauf mit Annahmetheke/Lager.
+
+Erste Mitarbeiterinteraktion: Übersicht des jeweiligen Gebäudes. Konten, Währung, Preise, Warenannahme und Zimmervermietung sind noch nicht festgelegt und werden nicht vorgetäuscht. Die Mod ist eine Gebäudegrundlage; sie ist noch kein aktiver Wirtschafts- oder Zahlungsanbieter. NG-Verkehr und NG-Fahrzeuge werden durch diesen Bauauftrag nicht verändert.
+
+Umsetzung, Build, Spieltests, Installation und Veröffentlichung werden in `DEV-0.0.1.md` getrennt dokumentiert. Öffentliche Ankündigung: [Issue 1](https://github.com/InDance2018/NG-City/issues/1). Keine MC02-Installation durch diesen Auftrag.
