@@ -1,0 +1,277 @@
+Using previously tested classes
+Forge Auto Renaming Tool v1.0.8
+lib: <public-dependencies>/lib/144-forge-1.20.2-48.1.0_mapped_official_1.20.2.jar
+lib: <public-dependencies>/lib/extra0-client-extra.jar
+lib: <public-dependencies>/lib/129-fmlearlydisplay-1.20.2-48.1.0.jar
+lib: <public-dependencies>/lib/125-javafmllanguage-1.20.2-48.1.0.jar
+lib: <public-dependencies>/lib/136-lowcodelanguage-1.20.2-48.1.0.jar
+lib: <public-dependencies>/lib/123-mclanguage-1.20.2-48.1.0.jar
+lib: <public-dependencies>/lib/122-fmlcore-1.20.2-48.1.0.jar
+lib: <public-dependencies>/lib/133-fmlloader-1.20.2-48.1.0.jar
+lib: <public-dependencies>/lib/130-JarJarSelector-0.3.19.jar
+lib: <public-dependencies>/lib/119-JarJarMetadata-0.3.19.jar
+lib: <public-dependencies>/lib/extra1-jimfs-1.3.0.jar
+lib: <public-dependencies>/lib/38-guava-32.1.2-jre.jar
+lib: <public-dependencies>/lib/32-jsr305-3.0.2.jar
+lib: <public-dependencies>/lib/78-annotations-24.0.1.jar
+lib: <public-dependencies>/lib/extra2-java-objc-bridge-1.1.jar
+lib: <public-dependencies>/lib/140-mergetool-1.1.7-api.jar
+lib: <public-dependencies>/lib/128-eventbus-6.2.0.jar
+lib: <public-dependencies>/lib/134-coremods-5.1.0.jar
+lib: <public-dependencies>/lib/131-forgespi-7.1.0.jar
+lib: <public-dependencies>/lib/142-modlauncher-10.1.1.jar
+lib: <public-dependencies>/lib/132-bootstrap-1.2.0.jar
+lib: <public-dependencies>/lib/143-securemodules-2.2.3.jar
+lib: <public-dependencies>/lib/126-unsafe-0.9.2.jar
+lib: <public-dependencies>/lib/extra3-nashorn-core-15.3.jar
+lib: <public-dependencies>/lib/13-asm-util-9.6.jar
+lib: <public-dependencies>/lib/139-accesstransformers-8.1.1.jar
+lib: <public-dependencies>/lib/19-asm-commons-9.6.jar
+lib: <public-dependencies>/lib/22-asm-analysis-9.6.jar
+lib: <public-dependencies>/lib/11-asm-tree-9.6.jar
+lib: <public-dependencies>/lib/16-asm-9.6.jar
+lib: <public-dependencies>/lib/111-antlr4-4.9.1.jar
+lib: <public-dependencies>/lib/113-antlr4-runtime-4.9.1.jar
+lib: <public-dependencies>/lib/75-typetools-0.6.3.jar
+lib: <public-dependencies>/lib/138-mergetool-api-1.0.jar
+lib: <public-dependencies>/lib/7-toml-3.6.4.jar
+lib: <public-dependencies>/lib/9-core-3.6.4.jar
+lib: <public-dependencies>/lib/extra4-maven-artifact-3.8.5.jar
+lib: <public-dependencies>/lib/extra5-terminalconsoleappender-1.2.0.jar
+lib: <public-dependencies>/lib/extra6-jline-reader-3.12.1.jar
+lib: <public-dependencies>/lib/extra7-jline-terminal-3.12.1.jar
+lib: <public-dependencies>/lib/71-mixin-0.8.5.jar
+lib: <public-dependencies>/lib/124-JarJarFileSystems-0.3.19.jar
+lib: <public-dependencies>/lib/37-failureaccess-1.0.1.jar
+lib: <public-dependencies>/lib/extra8-oshi-core-6.4.5.jar
+lib: <public-dependencies>/lib/74-gson-2.10.1.jar
+lib: <public-dependencies>/lib/extra9-icu4j-73.2.jar
+lib: <public-dependencies>/lib/110-authlib-5.0.47.jar
+lib: <public-dependencies>/lib/105-blocklist-1.0.10.jar
+lib: <public-dependencies>/lib/107-brigadier-1.1.8.jar
+lib: <public-dependencies>/lib/109-datafixerupper-6.0.8.jar
+lib: <public-dependencies>/lib/106-logging-1.1.1.jar
+lib: <public-dependencies>/lib/108-patchy-2.2.10.jar
+lib: <public-dependencies>/lib/104-text2speech-1.17.9.jar
+lib: <public-dependencies>/lib/extra10-httpclient-4.5.13.jar
+lib: <public-dependencies>/lib/85-commons-codec-1.16.0.jar
+lib: <public-dependencies>/lib/67-commons-io-2.13.0.jar
+lib: <public-dependencies>/lib/extra11-commons-logging-1.2.jar
+lib: <public-dependencies>/lib/65-netty-handler-4.1.97.Final.jar
+lib: <public-dependencies>/lib/57-netty-codec-4.1.97.Final.jar
+lib: <public-dependencies>/lib/61-netty-transport-native-epoll-4.1.97.Final-linux-aarch_64.jar
+lib: <public-dependencies>/lib/60-netty-transport-native-epoll-4.1.97.Final-linux-x86_64.jar
+lib: <public-dependencies>/lib/51-netty-transport-classes-epoll-4.1.97.Final.jar
+lib: <public-dependencies>/lib/50-netty-transport-native-unix-common-4.1.97.Final.jar
+lib: <public-dependencies>/lib/46-netty-transport-4.1.97.Final.jar
+lib: <public-dependencies>/lib/55-netty-buffer-4.1.97.Final.jar
+lib: <public-dependencies>/lib/44-netty-resolver-4.1.97.Final.jar
+lib: <public-dependencies>/lib/59-netty-common-4.1.97.Final.jar
+lib: <public-dependencies>/lib/26-fastutil-8.5.12.jar
+lib: <public-dependencies>/lib/extra12-jna-platform-5.13.0.jar
+lib: <public-dependencies>/lib/extra13-jna-5.13.0.jar
+lib: <public-dependencies>/lib/88-jopt-simple-5.0.4.jar
+lib: <public-dependencies>/lib/80-commons-compress-1.22.jar
+lib: <public-dependencies>/lib/82-commons-lang3-3.13.0.jar
+lib: <public-dependencies>/lib/extra14-httpcore-4.4.16.jar
+lib: <public-dependencies>/lib/27-log4j-core-2.19.0.jar
+lib: <public-dependencies>/lib/31-log4j-slf4j2-impl-2.19.0.jar
+lib: <public-dependencies>/lib/29-log4j-api-2.19.0.jar
+lib: <public-dependencies>/lib/35-joml-1.10.5.jar
+lib: <public-dependencies>/lib/100-lwjgl-glfw-3.3.2.jar
+lib: <public-dependencies>/lib/extra15-lwjgl-glfw-3.3.2-natives-linux.jar
+lib: <public-dependencies>/lib/103-lwjgl-jemalloc-3.3.2.jar
+lib: <public-dependencies>/lib/extra16-lwjgl-jemalloc-3.3.2-natives-linux.jar
+lib: <public-dependencies>/lib/99-lwjgl-openal-3.3.2.jar
+lib: <public-dependencies>/lib/extra17-lwjgl-openal-3.3.2-natives-linux.jar
+lib: <public-dependencies>/lib/98-lwjgl-opengl-3.3.2.jar
+lib: <public-dependencies>/lib/extra18-lwjgl-opengl-3.3.2-natives-linux.jar
+lib: <public-dependencies>/lib/101-lwjgl-stb-3.3.2.jar
+lib: <public-dependencies>/lib/extra19-lwjgl-stb-3.3.2-natives-linux.jar
+lib: <public-dependencies>/lib/102-lwjgl-tinyfd-3.3.2.jar
+lib: <public-dependencies>/lib/extra20-lwjgl-tinyfd-3.3.2-natives-linux.jar
+lib: <public-dependencies>/lib/97-lwjgl-3.3.2.jar
+lib: <public-dependencies>/lib/extra21-lwjgl-3.3.2-natives-linux.jar
+lib: <public-dependencies>/lib/extra22-noexception-1.7.1.jar
+lib: <public-dependencies>/lib/0-slf4j-simple-1.7.30.jar
+lib: <public-dependencies>/lib/4-slf4j-api-2.0.7.jar
+lib: <public-dependencies>/lib/120-srgutils-0.4.15.jar
+lib: <public-dependencies>/lib/extra23-plexus-utils-3.3.0.jar
+lib: <public-dependencies>/lib/36-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+lib: <public-dependencies>/lib/extra24-checker-qual-3.33.0.jar
+lib: <public-dependencies>/lib/94-error_prone_annotations-2.18.0.jar
+lib: <public-dependencies>/lib/116-ST4-4.3.jar
+lib: <public-dependencies>/lib/118-antlr-runtime-3.5.2.jar
+lib: <public-dependencies>/lib/extra25-org.abego.treelayout.core-1.0.3.jar
+lib: <public-dependencies>/lib/extra26-javax.json-1.0.4.jar
+log: null
+input: <workspace>/NG-City/build/ng-city-dev2-unmapped.jar
+output: <workspace>/NG-City/build/libs/ng_city-1.20.2-dev-0.0.2.jar
+threads: 4
+Names: <public-dependencies>/reobf-mappings.tsrg(reversed: false)
+Fix Annotations: false
+Fix Records: false
+Fix Identifiers: false
+Fix SourceFile: false
+Fix Line Numbers: false
+Strip codesigning signatures: false
+Adding Libraries to Inheritance
+Reading Input: <workspace>/NG-City/build/ng-city-dev2-unmapped.jar
+Adding input to inheritance map
+Processing entries
+Conflicting propagated mapping for de/nevergate/city/BuildingItem/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V from net/minecraft/world/item/Item/appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V: appendHoverText -> m_7373_
+Conflicting propagated mapping for de/nevergate/city/BuildingItem/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/Item/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;: useOn -> m_6225_
+Conflicting propagated mapping for de/nevergate/city/economy/EconomyData/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/level/saveddata/SavedData/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;: save -> m_7176_
+Conflicting propagated mapping for net/minecraft/world/entity/LivingEntity/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V from net/minecraft/world/entity/player/Player/lambda$addAdditionalSaveData$3(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V: lambda$addAdditionalSaveData$3 -> m_219754_
+Conflicting propagated mapping for de/nevergate/city/StarterLedger/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/level/saveddata/SavedData/save(Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;: save -> m_7176_
+Conflicting propagated mapping for de/nevergate/city/ServiceMenu/broadcastChanges()V from net/minecraft/world/inventory/AbstractContainerMenu/broadcastChanges()V: broadcastChanges -> m_38946_
+Conflicting propagated mapping for de/nevergate/city/ServiceMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/ChestMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6875_
+Conflicting propagated mapping for de/nevergate/city/ServiceMenu/clicked(IILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V from net/minecraft/world/inventory/AbstractContainerMenu/clicked(IILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V: clicked -> m_150399_
+Conflicting propagated mapping for de/nevergate/city/ServiceMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/inventory/ChestMenu/quickMoveStack(Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;: quickMoveStack -> m_7648_
+Conflicting propagated mapping for de/nevergate/city/StarterCrateItem/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/item/Item/useOn(Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;: useOn -> m_6225_
+Conflicting propagated mapping for de/nevergate/city/economy/BoundItem/use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder; from net/minecraft/world/item/Item/use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;: use -> m_7203_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu/removed(Lnet/minecraft/world/entity/player/Player;)V from net/minecraft/world/inventory/ChestMenu/removed(Lnet/minecraft/world/entity/player/Player;)V: removed -> m_6877_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/inventory/ChestMenu/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6875_
+Conflicting propagated mapping for de/nevergate/city/client/HotelDisplayRenderer/render(Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V from net/minecraft/client/renderer/blockentity/BlockEntityRenderer/render(Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V: render -> m_6922_
+Conflicting propagated mapping for de/nevergate/city/client/HotelDisplayRenderer/getViewDistance()I from net/minecraft/client/renderer/blockentity/BlockEntityRenderer/getViewDistance()I: getViewDistance -> m_142163_
+Conflicting propagated mapping for de/nevergate/city/economy/HotelDisplayEntity/getUpdateTag()Lnet/minecraft/nbt/CompoundTag; from net/minecraft/world/level/block/entity/BlockEntity/getUpdateTag()Lnet/minecraft/nbt/CompoundTag;: getUpdateTag -> m_5995_
+Conflicting propagated mapping for de/nevergate/city/economy/HotelDisplayEntity/load(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/load(Lnet/minecraft/nbt/CompoundTag;)V: load -> m_142466_
+Conflicting propagated mapping for de/nevergate/city/economy/HotelDisplayEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V from net/minecraft/world/level/block/entity/BlockEntity/saveAdditional(Lnet/minecraft/nbt/CompoundTag;)V: saveAdditional -> m_183515_
+Conflicting propagated mapping for de/nevergate/city/economy/HotelDisplayEntity/getUpdatePacket()Lnet/minecraft/network/protocol/Packet; from net/minecraft/world/level/block/entity/BlockEntity/getUpdatePacket()Lnet/minecraft/network/protocol/Packet;: getUpdatePacket -> m_58483_
+Conflicting propagated mapping for net/minecraft/world/level/block/entity/ChestBlockEntity/setBlockState(Lnet/minecraft/world/level/block/state/BlockState;)V from net/minecraft/world/level/block/entity/BlockEntity/setBlockState(Lnet/minecraft/world/level/block/state/BlockState;)V: setBlockState -> m_155250_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$Device/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/HorizontalDirectionalBlock/rotate(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;: rotate -> m_6843_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$Device/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/Block/getStateForPlacement(Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;: getStateForPlacement -> m_5573_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$Device/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState; from net/minecraft/world/level/block/HorizontalDirectionalBlock/mirror(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;: mirror -> m_6943_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$Device/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V from net/minecraft/world/level/block/Block/createBlockStateDefinition(Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V: createBlockStateDefinition -> m_7926_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$Device/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/state/BlockBehaviour/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$Display/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker; from net/minecraft/world/level/block/EntityBlock/getTicker(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/block/entity/BlockEntityTicker;: getTicker -> m_142354_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$Display/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity; from net/minecraft/world/level/block/EntityBlock/newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;: newBlockEntity -> m_142194_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$RoomDoor/neighborChanged(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V from net/minecraft/world/level/block/DoorBlock/neighborChanged(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V: neighborChanged -> m_6861_
+Conflicting propagated mapping for de/nevergate/city/economy/CityBlocks$RoomDoor/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult; from net/minecraft/world/level/block/DoorBlock/use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;: use -> m_6227_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/getContainerSize()I from net/minecraft/world/Container/getContainerSize()I: getContainerSize -> m_6643_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/setItem(ILnet/minecraft/world/item/ItemStack;)V from net/minecraft/world/Container/setItem(ILnet/minecraft/world/item/ItemStack;)V: setItem -> m_6836_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/removeItem(II)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/Container/removeItem(II)Lnet/minecraft/world/item/ItemStack;: removeItem -> m_7407_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/getItem(I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/Container/getItem(I)Lnet/minecraft/world/item/ItemStack;: getItem -> m_8020_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/clearContent()V from net/minecraft/world/Clearable/clearContent()V: clearContent -> m_6211_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/isEmpty()Z from net/minecraft/world/Container/isEmpty()Z: isEmpty -> m_7983_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/setChanged()V from net/minecraft/world/Container/setChanged()V: setChanged -> m_6596_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/removeItemNoUpdate(I)Lnet/minecraft/world/item/ItemStack; from net/minecraft/world/Container/removeItemNoUpdate(I)Lnet/minecraft/world/item/ItemStack;: removeItemNoUpdate -> m_8016_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/stillValid(Lnet/minecraft/world/entity/player/Player;)Z from net/minecraft/world/Container/stillValid(Lnet/minecraft/world/entity/player/Player;)Z: stillValid -> m_6542_
+Conflicting propagated mapping for de/nevergate/city/economy/WalletMenu$1/canPlaceItem(ILnet/minecraft/world/item/ItemStack;)Z from net/minecraft/world/Container/canPlaceItem(ILnet/minecraft/world/item/ItemStack;)Z: canPlaceItem -> m_7013_
+Adding extras
+Sorting
+Writing Output: <workspace>/NG-City/build/libs/ng_city-1.20.2-dev-0.0.2.jar
+  META-INF/
+  META-INF/MANIFEST.MF
+  META-INF/mods.toml
+  assets/
+  assets/ng_city/
+  assets/ng_city/blockstates/
+  assets/ng_city/blockstates/fundsachenlager.json
+  assets/ng_city/blockstates/geldautomat.json
+  assets/ng_city/blockstates/hotel_display.json
+  assets/ng_city/blockstates/zahlungsterminal.json
+  assets/ng_city/blockstates/zimmertuer.json
+  assets/ng_city/lang/
+  assets/ng_city/lang/de_de.json
+  assets/ng_city/lang/en_us.json
+  assets/ng_city/models/
+  assets/ng_city/models/block/
+  assets/ng_city/models/block/fundsachenlager.json
+  assets/ng_city/models/block/geldautomat.json
+  assets/ng_city/models/block/hotel_display.json
+  assets/ng_city/models/block/zahlungsterminal.json
+  assets/ng_city/models/item/
+  assets/ng_city/models/item/ankauf.json
+  assets/ng_city/models/item/bank.json
+  assets/ng_city/models/item/fundsachenlager.json
+  assets/ng_city/models/item/geldautomat.json
+  assets/ng_city/models/item/geldboerse.json
+  assets/ng_city/models/item/hotel.json
+  assets/ng_city/models/item/hotel_display.json
+  assets/ng_city/models/item/kreditkarte.json
+  assets/ng_city/models/item/muenze_1.json
+  assets/ng_city/models/item/muenze_10_cent.json
+  assets/ng_city/models/item/muenze_2.json
+  assets/ng_city/models/item/muenze_20_cent.json
+  assets/ng_city/models/item/muenze_50_cent.json
+  assets/ng_city/models/item/schein_10.json
+  assets/ng_city/models/item/schein_20.json
+  assets/ng_city/models/item/schein_50.json
+  assets/ng_city/models/item/startkiste.json
+  assets/ng_city/models/item/zahlungsterminal.json
+  assets/ng_city/models/item/zimmerschluessel.json
+  assets/ng_city/models/item/zimmertuer.json
+  assets/ng_city/textures/
+  assets/ng_city/textures/block/
+  assets/ng_city/textures/block/fundsachenlager.png
+  assets/ng_city/textures/block/geldautomat.png
+  assets/ng_city/textures/block/hotel_display.png
+  assets/ng_city/textures/block/zahlungsterminal.png
+  assets/ng_city/textures/item/
+  assets/ng_city/textures/item/geldboerse.png
+  assets/ng_city/textures/item/kreditkarte.png
+  assets/ng_city/textures/item/muenze_10_cent_back.png
+  assets/ng_city/textures/item/muenze_10_cent_front.png
+  assets/ng_city/textures/item/muenze_1_back.png
+  assets/ng_city/textures/item/muenze_1_front.png
+  assets/ng_city/textures/item/muenze_20_cent_back.png
+  assets/ng_city/textures/item/muenze_20_cent_front.png
+  assets/ng_city/textures/item/muenze_2_back.png
+  assets/ng_city/textures/item/muenze_2_front.png
+  assets/ng_city/textures/item/muenze_50_cent_back.png
+  assets/ng_city/textures/item/muenze_50_cent_front.png
+  assets/ng_city/textures/item/schein_10_back.png
+  assets/ng_city/textures/item/schein_10_front.png
+  assets/ng_city/textures/item/schein_20_back.png
+  assets/ng_city/textures/item/schein_20_front.png
+  assets/ng_city/textures/item/schein_50_back.png
+  assets/ng_city/textures/item/schein_50_front.png
+  assets/ng_city/textures/item/zimmerschluessel.png
+  de/
+  de/nevergate/
+  de/nevergate/city/
+  de/nevergate/city/BuildingItem.class
+  de/nevergate/city/BuildingKind.class
+  de/nevergate/city/BuildingPacking$1.class
+  de/nevergate/city/BuildingPacking$Target.class
+  de/nevergate/city/BuildingPacking$Vec3Center.class
+  de/nevergate/city/BuildingPacking.class
+  de/nevergate/city/BuildingPlan$1.class
+  de/nevergate/city/BuildingPlan.class
+  de/nevergate/city/Guide.class
+  de/nevergate/city/NgCity.class
+  de/nevergate/city/Placement.class
+  de/nevergate/city/PreviewGeometry.class
+  de/nevergate/city/ServiceMenu.class
+  de/nevergate/city/StarterCrateItem.class
+  de/nevergate/city/StarterLedger.class
+  de/nevergate/city/client/
+  de/nevergate/city/client/BuildingPreview.class
+  de/nevergate/city/client/HotelDisplayRenderer.class
+  de/nevergate/city/economy/
+  de/nevergate/city/economy/Banking.class
+  de/nevergate/city/economy/BoundItem.class
+  de/nevergate/city/economy/BuyPrices$Price.class
+  de/nevergate/city/economy/BuyPrices.class
+  de/nevergate/city/economy/CityBlocks$Device.class
+  de/nevergate/city/economy/CityBlocks$Display.class
+  de/nevergate/city/economy/CityBlocks$RoomDoor.class
+  de/nevergate/city/economy/CityBlocks.class
+  de/nevergate/city/economy/CityConfig.class
+  de/nevergate/city/economy/EconomyData$Account.class
+  de/nevergate/city/economy/EconomyData$Hotel.class
+  de/nevergate/city/economy/EconomyData$Receipt.class
+  de/nevergate/city/economy/EconomyData$Room.class
+  de/nevergate/city/economy/EconomyData$Stored.class
+  de/nevergate/city/economy/EconomyData.class
+  de/nevergate/city/economy/HotelDisplayEntity.class
+  de/nevergate/city/economy/HotelEvents$DoorAddress.class
+  de/nevergate/city/economy/HotelEvents.class
+  de/nevergate/city/economy/HotelService.class
+  de/nevergate/city/economy/Money$CashPlan.class
+  de/nevergate/city/economy/Money.class
+  de/nevergate/city/economy/WalletMenu$1.class
+  de/nevergate/city/economy/WalletMenu.class
+  pack.mcmeta
+<workspace>/NG-City/build/libs/ng_city-1.20.2-dev-0.0.2.jar

@@ -2,7 +2,7 @@ package de.nevergate.city;
 
 public enum BuildingKind {
     BANK("bank", "Bank", "Bankmitarbeiter", 11, 9, 6),
-    HOTEL("hotel", "Hotel", "Hotelrezeption", 13, 13, 11),
+    HOTEL("hotel", "Hotel", "Hotelrezeption", 19, 19, 11),
     BUYER("ankauf", "Ankauf", "Ankaufmitarbeiter", 11, 9, 6);
 
     public final String id, title, employee;

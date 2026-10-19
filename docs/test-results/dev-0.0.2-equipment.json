@@ -1,0 +1,31 @@
+{
+  "date_utc": "2026-10-19T19:23:54.077443+00:00",
+  "version": "0.0.2-dev",
+  "filename": "ng_city-1.20.2-dev-0.0.2.jar",
+  "sha256": "36e770cfffbd86ca018057256304a91116f61e2bde1a6bcfaf31b88f259d57a1",
+  "bytes": 1206614,
+  "production_classes": 47,
+  "tested_production_classes_equal_unmapped_release": true,
+  "source_resources_byte_equal": true,
+  "archive_crc": true,
+  "guide_pages": 32,
+  "game_tests": {
+    "process_exit": 0,
+    "recorded_passed": 72,
+    "recorded_failed": 0,
+    "new_equipment_cases_passed": 7,
+    "report": "dev-0.0.2-equipment-game-tests.ndjson",
+    "scope_note": "72 named successes captured. Two existing cases from previous 67-case set were not captured by the late-initialized custom reporter: replacementRevokesOldCardKeepsWallet and employeesFaceCustomersInAllDirections. Do not claim a complete 74/74 recorded run."
+  },
+  "validated": [
+    "All ten first and regular prices; first set EUR50 and repeat set EUR102",
+    "Per-player and per-item starter entitlement; real disk save/reload; old-save compatibility; replacement card",
+    "No charge or lost starter entitlement on bad PIN, insufficient money, full inventory, stale price or invalid article",
+    "Cash change and delivery reservation, exact cash freeing a slot",
+    "Actual menu tab, PIN input, repeated card purchase and cash shield purchase"
+  ],
+  "limits": [
+    "No graphical Minecraft client acceptance",
+    "No server installation or public release"
+  ]
+}

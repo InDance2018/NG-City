@@ -1,0 +1,47 @@
+{
+  "date_utc": "2026-10-19T18:55:30.609224+00:00",
+  "filename": "ng_city-1.20.2-dev-0.0.2.jar",
+  "version": "0.0.2-dev",
+  "sha256": "18e024e302d3c76989f11b38ffaaadc2507b5c036cd13203a3cff86f09034984",
+  "bytes": 1201022,
+  "production_classes": 45,
+  "archive_crc_ok": true,
+  "source_resources_byte_equal": true,
+  "production_classes_equal_to_tested_classes": true,
+  "unique_passed_across_suites": 67,
+  "suites": [
+    {
+      "file": "dev-0.0.2-digital-initial.ndjson",
+      "passed": 65,
+      "failed": [
+        {
+          "name": "ng_city.everyhotelcardpaymentandreclaimrequestspin",
+          "status": "failed",
+          "error": "java.lang.NullPointerException: Cannot invoke \"net.minecraft.network.ConnectionProtocol$CodecData.protocol()\" because the return value of \"io.netty.util.Attribute.get()\" is null"
+        },
+        {
+          "name": "ng_city.atmrequirespineveryvisitandrejectsstaleclicks",
+          "status": "failed",
+          "error": "java.lang.NullPointerException: Cannot invoke \"net.minecraft.network.ConnectionProtocol$CodecData.protocol()\" because the return value of \"io.netty.util.Attribute.get()\" is null"
+        }
+      ]
+    },
+    {
+      "file": "dev-0.0.2-digital-protocol.ndjson",
+      "passed": 66,
+      "failed": [
+        {
+          "name": "ng_city.buyereast",
+          "status": "failed",
+          "error": "net.minecraft.gametest.framework.GameTestAssertException: Exactly one employee required; found 0 at BlockPos{x=273, y=-56, z=127}"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No graphical Minecraft client acceptance",
+    "Initial mock-player connections had no PLAY protocol attributes; fixture corrected",
+    "Second suite buyerEast employee was not registered yet; that test passed in initial suite"
+  ],
+  "deployment": "No server installation or public release"
+}

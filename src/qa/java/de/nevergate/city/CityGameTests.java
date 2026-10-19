@@ -22,23 +22,26 @@ import net.minecraftforge.gametest.*;
 
 @GameTestHolder(value="ng_city",namespace="ng_city")
 public final class CityGameTests {
-    private static BlockPos origin(GameTestHelper h) { return h.absolutePos(new BlockPos(16,3,16)); }
-    private static void support(ServerLevel level,Map<BlockPos,net.minecraft.world.level.block.state.BlockState> plan) {
+    static BlockPos origin(GameTestHelper h) { return h.absolutePos(new BlockPos(16,3,16)); }
+    static void support(ServerLevel level,Map<BlockPos,net.minecraft.world.level.block.state.BlockState> plan) {
         BlockPos first=plan.keySet().iterator().next(); AABB bounds=new AABB(first);
         for(BlockPos p:plan.keySet()) bounds=bounds.minmax(new AABB(p));
+        var chunks=new HashSet<net.minecraft.world.level.ChunkPos>();for(var pos:plan.keySet())chunks.add(new net.minecraft.world.level.ChunkPos(pos));for(var chunk:chunks)level.setChunkForced(chunk.x,chunk.z,true);
+        final AABB region=bounds;
+        de.nevergate.city.economy.EconomyData.get(level).hotels.entrySet().removeIf(e->e.getValue().dimension.equals(level.dimension().location().toString())&&region.contains(Vec3.atCenterOf(BlockPos.of(e.getValue().origin))));
         for(Entity entity:level.getEntities((Entity)null,bounds,e->true)) entity.discard();
         for(BlockPos p:plan.keySet()) {
             level.setBlock(p,Blocks.AIR.defaultBlockState(),2);
             if(p.getY()==first.getY()) level.setBlock(p.below(),Blocks.STONE.defaultBlockState(),3);
         }
     }
-    private static ServerPlayer player(GameTestHelper h,BlockPos p,Direction into) {
+    static ServerPlayer player(GameTestHelper h,BlockPos p,Direction into) {
         ServerPlayer player=h.makeMockServerPlayerInLevel();
         player.setPos(p.getX()+.5,p.getY(),p.getZ()+.5); player.setYRot(into.toYRot());
         player.getAbilities().mayBuild=true; player.getAbilities().instabuild=false;
         return player;
     }
-    private static UseOnContext context(ServerPlayer p,BlockPos floor) {
+    static UseOnContext context(ServerPlayer p,BlockPos floor) {
         return new UseOnContext(p,InteractionHand.MAIN_HAND,new BlockHitResult(Vec3.atCenterOf(floor).add(0,.5,0),Direction.UP,floor,false));
     }
     private static void build(GameTestHelper h,BuildingKind kind,Direction dir) {
@@ -54,8 +57,8 @@ public final class CityGameTests {
         BlockPos door=bp.worldPos(o,dir,new BlockPos(kind.width/2,1,0));
         h.assertTrue(l.getBlockState(door).getBlock() instanceof DoorBlock,"Entrance missing");
         h.assertTrue(l.getBlockState(door.above()).getValue(DoorBlock.HALF)==DoubleBlockHalf.UPPER,"Door incomplete");
-        h.runAfterDelay(2,()-> {
-        var employees=l.getEntitiesOfClass(Villager.class,new AABB(bp.employeePos(o,dir)).inflate(1));
+        h.runAfterDelay(4,()-> {
+        var employees=l.getEntitiesOfClass(Villager.class,new AABB(bp.employeePos(o,dir)).inflate(1),v->v.getPersistentData().hasUUID("ng_city_owner")&&v.getPersistentData().getUUID("ng_city_owner").equals(player.getUUID())&&v.getPersistentData().getString("ng_city_role").equals(kind.id));
         h.assertTrue(employees.size()==1,"Exactly one employee required; found "+employees.size()+" at "+bp.employeePos(o,dir));
         Villager npc=employees.get(0);
         h.assertTrue(npc.getPersistentData().getString("ng_city_role").equals(kind.id)&&npc.isNoAi()&&npc.isPersistenceRequired(),"Employee role/persistence missing");
@@ -72,31 +75,31 @@ public final class CityGameTests {
         h.succeed();
         });
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build0",template="ng_city:empty",timeoutTicks=40)
     public static void bankSouth(GameTestHelper h) { build(h,BuildingKind.BANK,Direction.SOUTH); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build0",template="ng_city:empty",timeoutTicks=40)
     public static void bankWest(GameTestHelper h) { build(h,BuildingKind.BANK,Direction.WEST); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build0",template="ng_city:empty",timeoutTicks=40)
     public static void bankNorth(GameTestHelper h) { build(h,BuildingKind.BANK,Direction.NORTH); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build0",template="ng_city:empty",timeoutTicks=40)
     public static void bankEast(GameTestHelper h) { build(h,BuildingKind.BANK,Direction.EAST); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build0",template="ng_city:empty",timeoutTicks=40)
     public static void hotelSouth(GameTestHelper h) { build(h,BuildingKind.HOTEL,Direction.SOUTH); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build0",template="ng_city:empty",timeoutTicks=40)
     public static void hotelWest(GameTestHelper h) { build(h,BuildingKind.HOTEL,Direction.WEST); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build0",template="ng_city:empty",timeoutTicks=40)
     public static void hotelNorth(GameTestHelper h) { build(h,BuildingKind.HOTEL,Direction.NORTH); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build1",template="ng_city:empty",timeoutTicks=40)
     public static void hotelEast(GameTestHelper h) { build(h,BuildingKind.HOTEL,Direction.EAST); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build1",template="ng_city:empty",timeoutTicks=40)
     public static void buyerSouth(GameTestHelper h) { build(h,BuildingKind.BUYER,Direction.SOUTH); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build1",template="ng_city:empty",timeoutTicks=40)
     public static void buyerWest(GameTestHelper h) { build(h,BuildingKind.BUYER,Direction.WEST); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build1",template="ng_city:empty",timeoutTicks=40)
     public static void buyerNorth(GameTestHelper h) { build(h,BuildingKind.BUYER,Direction.NORTH); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build1",template="ng_city:empty",timeoutTicks=40)
     public static void buyerEast(GameTestHelper h) { build(h,BuildingKind.BUYER,Direction.EAST); }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build1",template="ng_city:empty",timeoutTicks=40)
     public static void blockedSitePreservesKitAndBlocks(GameTestHelper h) {
         var l=h.getLevel();var o=origin(h);var plan=new BuildingPlan(BuildingKind.BANK).transformed(o,Direction.SOUTH);support(l,plan);
         l.setBlock(o.above(2),Blocks.DIAMOND_BLOCK.defaultBlockState(),3);
@@ -104,7 +107,7 @@ public final class CityGameTests {
         h.assertTrue(NgCity.BANK.get().useOn(context(p,o.below()))==InteractionResult.FAIL,"Overwrote obstacle");
         h.assertTrue(p.getMainHandItem().getCount()==1&&l.getBlockState(o.above(2)).is(Blocks.DIAMOND_BLOCK)&&l.getBlockState(o).isAir(),"Partial mutation or kit lost");h.succeed();
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build1",template="ng_city:empty",timeoutTicks=40)
     public static void unsupportedFluidAndEntityRejected(GameTestHelper h) {
         var l=h.getLevel();var o=origin(h);var plan=new BuildingPlan(BuildingKind.BUYER).transformed(o,Direction.SOUTH);
         h.assertTrue(Placement.validate(l,plan,null,null)!=null,"Unsupported foundation accepted");support(l,plan);
@@ -113,7 +116,7 @@ public final class CityGameTests {
         var pig=EntityType.PIG.create(l);pig.moveTo(o.getX()+.5,o.getY()+1,o.getZ()+.5,0,0);l.addFreshEntity(pig);
         h.assertTrue(Placement.validate(l,plan,null,null)!=null,"Living entity accepted");pig.discard();h.succeed();
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build2",template="ng_city:empty",timeoutTicks=40)
     public static void protectionCancellationRollsBack(GameTestHelper h) {
         var l=h.getLevel();var o=origin(h);var plan=new BuildingPlan(BuildingKind.BANK).transformed(o,Direction.SOUTH);support(l,plan);
         var p=player(h,o.north(4),Direction.SOUTH);p.setItemInHand(InteractionHand.MAIN_HAND,new ItemStack(NgCity.BANK.get()));
@@ -124,16 +127,16 @@ public final class CityGameTests {
         h.assertTrue(p.getMainHandItem().getCount()==1,"Canceled placement consumed kit");
         for(BlockPos pos:plan.keySet())h.assertTrue(l.getBlockState(pos).isAir(),"Canceled placement left blocks");h.succeed();
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build2",template="ng_city:empty",timeoutTicks=40)
     public static void crateContainsThreeKitsAndGuide(GameTestHelper h) {
         var l=h.getLevel();var o=origin(h);l.setBlock(o.below(),Blocks.STONE.defaultBlockState(),3);
-        var p=player(h,o.north(4),Direction.SOUTH);p.setItemInHand(InteractionHand.MAIN_HAND,new ItemStack(NgCity.STARTER.get()));
-        h.assertTrue(NgCity.STARTER.get().useOn(context(p,o.below()))==InteractionResult.CONSUME,"Crate not placed");
+        var ledger=new StarterLedger();
+        h.assertTrue(SharedStarter.place(l,ledger,o),"Shared crate not placed");
         var chest=(ChestBlockEntity)l.getBlockEntity(o);
         h.assertTrue(chest.getItem(10).is(NgCity.BANK.get())&&chest.getItem(13).is(NgCity.HOTEL.get())&&chest.getItem(16).is(NgCity.BUYER.get()),"Missing kits");
-        h.assertTrue(chest.getItem(22).is(Items.WRITTEN_BOOK)&&chest.getItem(22).getTag().getList("pages",8).size()==14,"Missing readable guide");h.succeed();
+        h.assertTrue(chest.getItem(22).is(Items.WRITTEN_BOOK)&&chest.getItem(22).getTag().getList("pages",8).size()>=19,"Missing readable guide");h.succeed();
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build2",template="ng_city:empty",timeoutTicks=40)
     public static void employeeAndLedgerNativeNbtRoundtrip(GameTestHelper h) {
         var l=h.getLevel();var o=origin(h);var id=UUID.randomUUID();
         var npc=Placement.employee(l,BuildingKind.HOTEL,o,Direction.SOUTH,id);
@@ -143,28 +146,28 @@ public final class CityGameTests {
         var ledger=new StarterLedger();ledger.mark(id);var saved=ledger.save(new CompoundTag());
         h.assertTrue(StarterLedger.load(saved).has(id)&&!StarterLedger.load(saved).has(UUID.randomUUID()),"Starter ledger roundtrip failed");h.succeed();
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build2",template="ng_city:empty",timeoutTicks=40)
     public static void employeeMenuPreventsAllExtraction(GameTestHelper h) {
         var o=origin(h);var p=player(h,o,Direction.SOUTH);var npc=Placement.employee(h.getLevel(),BuildingKind.BANK,o,Direction.SOUTH,p.getUUID());
         var menu=new ServiceMenu(1,p.getInventory(),npc,BuildingKind.BANK);
         for(ClickType click:ClickType.values())for(int slot:new int[]{-999,4,11,13,15,27,35})menu.clicked(slot,0,click,p);
-        h.assertTrue(menu.getSlot(11).getItem().is(Items.GOLD_INGOT)&&menu.getCarried().isEmpty()&&menu.quickMoveStack(p,11).isEmpty(),"Menu gave out icon items");
+        h.assertTrue(menu.getSlot(4).getItem().is(Items.GOLD_INGOT)&&menu.getCarried().isEmpty()&&menu.quickMoveStack(p,11).isEmpty(),"Menu gave out icon items");
         h.assertTrue(menu.stillValid(p),"Nearby employee menu invalid");p.setPos(o.getX()+20,o.getY(),o.getZ());h.assertTrue(!menu.stillValid(p),"Distant menu valid");h.succeed();
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build2",template="ng_city:empty",timeoutTicks=40)
     public static void buildHeightAndReadOnlyPlayerRejected(GameTestHelper h) {
         var l=h.getLevel();var o=origin(h);var bp=new BuildingPlan(BuildingKind.BANK);var plan=bp.transformed(o,Direction.SOUTH);support(l,plan);
         var p=player(h,o.north(4),Direction.SOUTH);p.getAbilities().mayBuild=false;
         h.assertTrue(Placement.validate(l,plan,p,null)!=null,"No-build player accepted");
         h.assertTrue(Placement.validate(l,bp.transformed(new BlockPos(o.getX(),l.getMaxBuildHeight()-1,o.getZ()),Direction.SOUTH),null,null)!=null,"Invalid height accepted");h.succeed();
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build2",template="ng_city:empty",timeoutTicks=40)
     public static void employeeReturnsToWorkplace(GameTestHelper h) {
         var o=origin(h);var npc=Placement.employee(h.getLevel(),BuildingKind.BUYER,o,Direction.SOUTH,UUID.randomUUID());
         h.getLevel().addFreshEntity(npc);npc.teleportTo(o.getX()+3,o.getY(),o.getZ()+3);
         h.runAfterDelay(3,()->{h.assertTrue(npc.distanceToSqr(o.getX()+.5,o.getY(),o.getZ()+.5)<.01,"Employee left workplace");h.succeed();});
     }
-    @GameTest(template="ng_city:empty",timeoutTicks=40)
+    @GameTest(batch="build2",template="ng_city:empty",timeoutTicks=40)
     public static void starterLedgerReloadsFromDisk(GameTestHelper h) throws Exception {
         var folder=java.nio.file.Files.createTempDirectory("ng-city-ledger-").toFile();
         var factory=new net.minecraft.world.level.saveddata.SavedData.Factory<>(StarterLedger::new,StarterLedger::load,net.minecraft.util.datafix.DataFixTypes.LEVEL);
@@ -172,5 +175,31 @@ public final class CityGameTests {
         var ledger=storage.computeIfAbsent(factory,"starters");var id=UUID.randomUUID();ledger.mark(id);storage.save();
         var reopened=new net.minecraft.world.level.storage.DimensionDataStorage(folder,h.getLevel().getServer().getFixerUpper());
         h.assertTrue(reopened.computeIfAbsent(factory,"starters").has(id),"Saved starter recipient lost after actual disk reload");h.succeed();
+    }
+
+    @GameTest(batch="hotel_layout",template="ng_city:empty",timeoutTicks=100)
+    public static void spaciousRoomWalkwaysAllDirections(GameTestHelper h) {
+        var bp=new BuildingPlan(BuildingKind.HOTEL);
+        h.assertTrue(bp.width==19&&bp.depth==19,"Wrong spacious footprint");
+        for(var dir:Direction.Plane.HORIZONTAL){
+            var origin=origin(h);var hotel=new de.nevergate.city.economy.EconomyData.Hotel();hotel.origin=origin.asLong();hotel.direction=dir.get2DDataValue();hotel.layout=2;
+            var map=bp.transformed(origin,dir);
+            for(int room=0;room<2;room++){
+                int x=room==0?6:14;
+                for(int z=8;z<=17;z++)for(int y=6;y<=7;y++)h.assertTrue(map.get(bp.worldPos(origin,dir,new BlockPos(x,y,z))).isAir(),"Door-to-back walkway blocked");
+                var bounds=de.nevergate.city.economy.HotelService.roomBounds(hotel,room);
+                h.assertTrue(bounds.getXsize()*bounds.getZsize()>=(room==0?60:70),"Room too small");
+                var bed=bp.worldPos(origin,dir,new BlockPos(room==0?4:16,6,15));h.assertTrue(bounds.contains(Vec3.atCenterOf(bed)),"Bed outside protected room");
+                h.assertTrue(!bounds.contains(Vec3.atCenterOf(de.nevergate.city.economy.HotelService.door(hotel,room))),"Door inside expiry bounds");
+            }
+        }h.succeed();
+    }
+    @GameTest(batch="hotel_layout",template="ng_city:empty",timeoutTicks=100)
+    public static void compactDev2HotelRetainsLayoutAndPacking(GameTestHelper h) {
+        var l=h.getLevel();var o=origin(h);var old=new BuildingPlan(BuildingKind.HOTEL,1);var map=old.transformed(o,Direction.SOUTH);support(l,map);Placement.apply(l,map,null,Direction.UP);
+        var npc=Placement.employee(l,BuildingKind.HOTEL,old.employeePos(o,Direction.SOUTH),Direction.SOUTH,UUID.randomUUID());l.addFreshEntity(npc);
+        var hotel=de.nevergate.city.economy.HotelService.ensure(npc);h.assertTrue(hotel.layout==1&&hotel.installed,"Compact hotel not retained");
+        var geometry=PreviewGeometry.create(de.nevergate.city.economy.HotelService.plan(hotel),o,Direction.SOUTH);
+        h.assertTrue(BuildingPacking.validate(l,new BuildingPacking.Target(geometry,npc,old.worldPos(o,Direction.SOUTH,new BlockPos(6,3,-1))),null)==null,"Compact hotel cannot be packed");h.succeed();
     }
 }

@@ -3,11 +3,11 @@ loaderVersion="[48,49)"
 license="All Rights Reserved"
 [[mods]]
 modId="ng_city"
-version="0.0.1-dev"
+version="0.0.2-dev"
 displayName="NG-City"
 authors="NeverGate"
 displayURL="https://nevergate.de/ng-city/"
-description='''Begehbare Stadtgebäude: Bank, Hotel und Ankauf mit Mitarbeitern und Startkiste. Erste Entwicklungsversion; Wirtschaft noch nicht aktiviert.'''
+description='''Bank, NG-Währung, Geldbörse, Kreditkarte, Geldautomat, Vanilla-Ankauf und Hotel mit Zimmervermietung, Schlüsseln und Fundsachen. Bauvorschau und Einpacken.'''
 [[dependencies.ng_city]]
 modId="forge"
 mandatory=true

@@ -2,5 +2,21 @@
   "item.ng_city.startkiste": "NG-City · Starter Crate",
   "item.ng_city.bank": "Bank · Building Kit",
   "item.ng_city.hotel": "Hotel · Building Kit",
-  "item.ng_city.ankauf": "Buyer · Building Kit"
+  "item.ng_city.ankauf": "Buyer · Building Kit",
+  "item.ng_city.muenze_10_cent": "NG 10 Cent",
+  "item.ng_city.muenze_20_cent": "NG 20 Cent",
+  "item.ng_city.muenze_50_cent": "NG 50 Cent",
+  "item.ng_city.muenze_1": "NG 1 Euro",
+  "item.ng_city.muenze_2": "NG 2 Euro",
+  "item.ng_city.schein_10": "NG 10 Euro",
+  "item.ng_city.schein_20": "NG 20 Euro",
+  "item.ng_city.schein_50": "NG 50 Euro",
+  "item.ng_city.geldboerse": "NG-Geldbörse",
+  "item.ng_city.kreditkarte": "NG-Kreditkarte",
+  "item.ng_city.zimmerschluessel": "NG-Zimmerschlüssel",
+  "block.ng_city.geldautomat": "NG-Geldautomat",
+  "block.ng_city.zahlungsterminal": "NG-Zahlungsterminal",
+  "block.ng_city.hotel_display": "NG-Zimmerübersicht",
+  "block.ng_city.fundsachenlager": "NG-Fundsachenlager",
+  "block.ng_city.zimmertuer": "NG-Zimmertür"
 }

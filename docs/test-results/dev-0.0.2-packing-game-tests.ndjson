@@ -1,0 +1,10 @@
+{"name":"ng_city_packing.previewvalidationmatchesblockedandclearsites","status":"passed"}
+{"name":"ng_city_packing.previewusesexactdimensionsandentranceineverydirection","status":"passed"}
+{"name":"ng_city_packing.peopleandlooseitemsblockpacking","status":"passed"}
+{"name":"ng_city_packing.canceledbreakpreserveswholebuilding","status":"passed"}
+{"name":"ng_city_packing.addedandmissingblocksblockpacking","status":"passed"}
+{"name":"ng_city_packing.inventoryitemsblockpackingwithoutloss","status":"passed"}
+{"name":"ng_city_packing.rotatedbuyerpacksintosinglekit","status":"passed"}
+{"name":"ng_city_packing.rotatedhotelpacksintosinglekit","status":"passed"}
+{"name":"ng_city_packing.bankpacksintosinglekit","status":"passed"}
+{"complete":true}

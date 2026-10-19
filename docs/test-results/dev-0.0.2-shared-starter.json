@@ -1,0 +1,52 @@
+{
+  "date_utc": "2026-10-19T19:46:15.633231+00:00",
+  "version": "0.0.2-dev",
+  "filename": "ng_city-1.20.2-dev-0.0.2.jar",
+  "sha256": "1b463e288ac516cf730c430ffdb844aafa58db7bb43eebcc5955270322bb9b63",
+  "bytes": 1209143,
+  "production_classes": 48,
+  "tested_classes_equal_unmapped_release": true,
+  "resources_equal_sources": true,
+  "archive_crc": true,
+  "game_tests": {
+    "unique_passed_by_function_across_suites": 79,
+    "suites": [
+      {
+        "file": "dev-0.0.2-shared-full.ndjson",
+        "passed": 77,
+        "failed": [
+          {
+            "name": "ng_city_packfix.bankfromporch",
+            "status": "failed",
+            "error": "net.minecraft.gametest.framework.GameTestAssertException: Settled building refused: Bitte zuerst alle Personen, Tiere und Gegenst\u00e4nde aus dem Geb\u00e4ude entfernen.; no block differences"
+          },
+          {
+            "name": "ng_city.playerloginsandadmincommandnevergivepersonalcrates",
+            "status": "failed",
+            "error": "java.lang.NullPointerException: Cannot invoke \"net.minecraft.server.network.ServerGamePacketListenerImpl.getConnection()\" because \"serverPlayer.connection\" is null"
+          }
+        ]
+      },
+      {
+        "file": "dev-0.0.2-shared-focused.ndjson",
+        "passed": 15,
+        "failed": []
+      }
+    ],
+    "focused_exit_code": 0,
+    "note": "Full run 77/79. Login fixture initially used a fake player without a network connection; fixed to use standard mock player with PLAY codecs. Bank porch fixture had a transient occupant and passed in isolated suite. Focused run 15/15. Shared tests moved to ng_city_shared for selective runs; uniqueness counts function names."
+  },
+  "validated": [
+    "One shared crate containing exactly three building kits and the handbook",
+    "Empty or broken crate never refills; moved spawn cannot create a second starter set",
+    "Existing blocks, chest inventory, lid clearance, water and adjacent chests protected; safe retry",
+    "Global distribution flag and position survive native disk reload; legacy recipients prevent duplicate grants",
+    "Three player logins and console command give no personal items or extra contents",
+    "Legacy personal starter item cannot place more kits"
+  ],
+  "limits": [
+    "No live dedicated-server/multi-client acceptance",
+    "No complete real-world stop/start/client acceptance; native data disk round-trip tested",
+    "No server installation, Discord/GitHub publishing or public release"
+  ]
+}

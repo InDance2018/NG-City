@@ -1,86 +1,334 @@
 {
   "de": {
-    "tag": "PROJEKTKATALOG · PLANUNGSSTAND",
-    "title": "Die Grundlage für deine Stadt.",
-    "intro": "NG-City soll die gemeinsame Grundlage für die NeverGate-Stadt und ihr Wirtschaftssystem bilden. Verkehr, Fahrzeuge und spätere Erweiterungen können daran angebunden werden.",
-    "status": "Planung · 18.10.2026 · Kein Mod-Build verfügbar",
-    "sections": [
+    "tag": "WEBKATALOG & BEDIENUNGSANLEITUNG",
+    "title": "Deine Stadt beginnt hier.",
+    "intro": "Fertig platzierbare Gebäude, Bankkonto, NG-Bargeld, Warenankauf und Hotelvermietung für Minecraft 1.20.2 mit Forge 48.1.0 und Java 17.",
+    "status": "dev-0.0.2 · 19.10.2026 · Einzelspieler bestanden; Mehrspieler folgt nach Interface-Umbau",
+    "pages": [
       [
-        "01 / Ziel",
-        "Eine vollständige Minecraft-Stadt schrittweise aufbauen: NG-City verbindet die wirtschaftlichen Vorgänge der beteiligten NG-Projekte über eine gemeinsame Grundlage."
+        "Funktionen & Gebäude",
+        [
+          [
+            "Bank",
+            "Konto beim Bankmitarbeiter eröffnen: einmalig 250 Euro Startguthaben. Persönliche Kreditkarte mit vierstelliger PIN, Geldbörse mit 54 Geldfächern und Geldautomat zum Ein- und Auszahlen."
+          ],
+          [
+            "Ankauf",
+            "Vanilla-Blöcke und ausgewählte Rohstoffe direkt aus dem Spielerinventar verkaufen. Material- und rezeptabhängige Preise; bar oder auf das Konto. Gemeinsam höchstens 2.000 Euro je rollierender Echtstunde und Spieler."
+          ],
+          [
+            "Hotel",
+            "Zwei getrennt abschließbare Zimmer, Rezeption, Innentreppe, Zahlungsterminal, Zimmerübersicht und Fundsachenlager. Buchung für 1 bis 7 Minecraft-Tage; 5 Euro pro Tag."
+          ],
+          [
+            "Hotelzimmer vergrößert",
+            "Neue Hotels: 19 × 19 Blöcke Grundfläche, 11 Blöcke hoch. Zimmer 1: 6 × 10 Blöcke innen; Zimmer 2: 7 × 10. Bett und Fass stehen seitlich beziehungsweise im hinteren Bereich. Hinter jeder Zimmertür bleibt ein freier Laufweg."
+          ],
+          [
+            "Vorschau & Einpacken",
+            "Gebäudepaket halten: Bauumriss, Eingang und Abmessungen ansehen. Unveränderte, leere Gebäude am Außenschild wieder einpacken. Beide Funktionen nutzen denselben Bauplan."
+          ],
+          [
+            "Digitale Menüs",
+            "Bank, Verkauf, Geldautomat und Hotel nutzen digitale Bedienfelder. Automat und Hotelterminal haben eigene moderne Modelle. PIN per Maus oder Tastatur."
+          ]
+        ]
       ],
       [
-        "02 / Drei eigenständige Mods",
-        "NG-City, NG-Verkehr und NG-Fahrzeuge bleiben getrennte Projekte und JAR-Dateien. NG-Verkehr und NG-Fahrzeuge müssen ohne NG-City selbständig funktionieren."
+        "Items & Geräte",
+        [
+          [
+            "Gebäudepakete",
+            "Die gemeinsame Startkiste am Weltspawn enthält genau ein Bankpaket, Hotelpaket, Ankaufpaket und das Starthandbuch. Keine persönlichen Kisten und keine Nachfüllung."
+          ],
+          [
+            "Persönliche Gegenstände",
+            "Geldbörse, Kreditkarte und Zimmerschlüssel. Karte und Geldbörse gehören zur Spieler-UUID; ein Schlüssel gilt nur für den passenden Spieler, das gebuchte Zimmer und die laufende Buchung."
+          ],
+          [
+            "Münzen",
+            "10 Cent, 20 Cent, 50 Cent, 1 Euro und 2 Euro. Jede Stückelung besitzt eine Vorder- und Rückseite."
+          ],
+          [
+            "Geldscheine",
+            "10 Euro, 20 Euro und 50 Euro mit getrennten Vorder- und Rückseiten. Alle Geldwerte sind NG-Spielwährung. Keine 1-, 2- oder 5-Cent-Münzen und kein 5-Euro-Schein."
+          ],
+          [
+            "Geräte & Baublöcke",
+            "Geldautomat, Zahlungsterminal, Fundsachenlager, Hotel-Zimmerdisplay und abschließbare Zimmertür. Die Hotelgeräte müssen zu einem registrierten Hotel gehören."
+          ]
+        ]
       ],
       [
-        "03 / Wirtschaft nur mit NG-City",
-        "Wirtschaftsfunktionen greifen ausschließlich, wenn NG-City tatsächlich installiert und die Anbindung verfügbar ist. Ohne NG-City gibt es in Verkehr und Fahrzeuge keine aktiven Geldkonten, wirtschaftlichen Preise, Gebühren, Zahlungen oder Ersatzwährung."
+        "Bedienung: Start & Bank",
+        [
+          [
+            "1. Installieren",
+            "Die vorherige NG-City-JAR durch die neue Datei ersetzen. Nur eine NG-City-Version im mods-Ordner behalten. Bei einem Forge-Server benötigen Server und Clients dieselbe Mod. Vor einem Wechsel die Welt sichern."
+          ],
+          [
+            "2. Gemeinsame Startkiste",
+            "Am Weltspawn steht eine gemeinsame Kiste für alle mit Bank, Hotel, Ankauf und Handbuch. Die Koordinaten stehen beim Eintritt im Chat. Keine persönlichen Starter und keine Nachfüllung. Bereits nach altem Verfahren versorgte Welten bekommen kein weiteres Paket."
+          ],
+          [
+            "3. Gebäude setzen",
+            "Paket in die Hand nehmen und die Vorschau prüfen. Rechtsklick auf die Oberseite festen Bodens setzt das Gebäude; der Eingang zeigt zu dir. Der komplette Bauplatz muss frei, geladen, getragen und bebaubar sein. Bank und Ankauf benötigen jeweils 11 × 10 × 6 Blöcke; das neue Hotel 19 × 20 × 11, jeweils einschließlich Eingangsstufe."
+          ],
+          [
+            "4. Konto & Geldbörse",
+            "Bankmitarbeiter rechtsklicken und Konto eröffnen wählen. Die Geldbörse öffnest du per Rechtsklick; nur NG-Bargeld passt hinein. Bei Verlust ersetzt die Bank Karte oder Geldbörse. Eine Ersatzkarte sperrt die vorherige und erhält am Geldautomaten eine neue PIN; die Ersatzgeldbörse zeigt denselben gespeicherten Inhalt."
+          ],
+          [
+            "5. Geldautomat",
+            "Eigene gültige Kreditkarte im Inventar behalten. Geldautomaten rechtsklicken. Beim ersten Besuch mit den Ziffernschaltflächen eine vierstellige PIN wählen und mit Grün bestätigen; sie wird auf der Karte gespeichert. Bei jedem weiteren Besuch die PIN erneut eingeben. Danach eine Stückelung oder 10/20/50/100 Euro auswählen. Bargeld erscheint im Inventar. Die Einzahlungsschaltfläche zahlt loses NG-Bargeld aus dem Inventar vollständig aufs Konto ein; Geldbörseninhalt vorher herausnehmen."
+          ]
+        ]
       ],
       [
-        "04 / Gemeinsame Zuständigkeiten",
-        "NG-City verwaltet die zentrale Wirtschaftsgrundlage. NG-Verkehr liefert Straßen und Verkehrstechnik; NG-Fahrzeuge liefert Fahrzeuge und deren Funktionen. Konten und Geldbewegungen werden nicht in jeder Mod parallel geführt."
+        "Bedienung: Waren verkaufen",
+        [
+          [
+            "1. Waren im Inventar behalten",
+            "Du musst die Waren in keine Kiste legen. Nimm verkaufbare Vanilla-Blöcke oder Rohstoffe ins normale Inventar und rechtsklicke den Ankaufmitarbeiter. Ein Bankkonto ist erforderlich."
+          ],
+          [
+            "2. Angebot prüfen",
+            "Im Menü erscheinen die verfügbaren Waren mit Mindestmenge und Auszahlung. Fahre mit der Maus über das Warensymbol, um die Beschriftung zu lesen. Mit den Pfeilen wechselst du bei Bedarf die Seite."
+          ],
+          [
+            "3. Auszahlung wählen",
+            "Unten links zwischen Bargeld und Konto wechseln. Kontozahlung erhöht den Kontostand; Bargeld wird ins Inventar gelegt. Oben wird dein verbleibendes gemeinsames Stundenlimit angezeigt."
+          ],
+          [
+            "4. Mit Linksklick verkaufen",
+            "Linksklick auf das Warensymbol verkauft sofort die größtmögliche passende Menge dieser Ware innerhalb deines Restlimits. Es gibt keine eigene Mengenauswahl und keinen zusätzlichen Bestätigungsschritt. Bewahre Mengen, die du behalten möchtest, vorher außerhalb deines Inventars auf."
+          ],
+          [
+            "5. Automatische Abrechnung",
+            "Die passenden Waren werden aus deinem Inventar entfernt und bezahlt. Fehlen Mindestmenge oder Platz für Bargeld, wird der Verkauf abgelehnt. Waren mit individuellen Zusatzdaten und gefüllte Behälter werden nicht angenommen."
+          ],
+          [
+            "Preisbeispiele & Limit",
+            "Standardbeispiele: 64 Erde = 0,10 Euro; 32 Stein = 0,10 Euro; 1 Diamant = 5 Euro; 1 Diamantblock = 45 Euro. Verarbeitete Varianten richten sich nach Rezept und Material. Maßgeblich ist das angezeigte Angebot deiner Welt. Bar- und Kontoverkäufe teilen sich 2.000 Euro pro rollierender Echtstunde; kein täglicher Mitternachtsreset."
+          ]
+        ]
       ],
       [
-        "05 / Beispiele für die spätere Anbindung",
-        "Ein Parkplatz aus NG-Verkehr könnte eine Zahlung über NG-City abwickeln. Ein Fahrzeugkauf könnte dieselbe zentrale Wirtschaft nutzen. Diese Beispiele sind keine bereits gebauten oder getesteten Funktionen."
+        "Bedienung: Hotel & Gebäudewechsel",
+        [
+          [
+            "1. Zimmer buchen",
+            "Rezeption oder Hotelterminal rechtsklicken. Unten links Zahlungsart wählen, freies Zimmer auswählen, 1 bis 7 Tage mit Minus/Plus einstellen und „Jetzt bezahlen und Zimmerschlüssel erhalten“ anklicken. Bei jeder Kartenzahlung erscheint die PIN-Abfrage; vier Ziffern eingeben und mit Grün bestätigen. Auch die Abholung von Fundsachen mit Karte erfordert jedes Mal die PIN. Beim ersten Mal die PIN zuvor am Geldautomaten festlegen. Karte und Kontoguthaben beziehungsweise genügend Bargeld und Platz für Wechselgeld bereithalten."
+          ],
+          [
+            "2. Zimmer nutzen",
+            "Schlüssel in Haupt- oder Nebenhand nehmen und die eigene Zimmertür rechtsklicken. Sie schließt nach zwei Sekunden. Die Zimmerübersicht zeigt frei in Grün sowie bei Belegung Spielername und Resttage. Einen verlorenen Schlüssel erhältst du beim Personal für dein ausgewähltes eigenes Zimmer."
+          ],
+          [
+            "3. Buchungsende",
+            "Es zählt die Minecraft-Tageszeit, einschließlich übersprungener Nächte. Nach Ablauf wird der Schlüssel ungültig und ein noch im Zimmer befindlicher Spieler zur Lobby versetzt. Den alten Schlüssel kannst du entsorgen. Zurückgelassene Sachen werden eingelagert."
+          ],
+          [
+            "4. Fundsachen abholen",
+            "Beim Hotelpersonal oder Fundsachenlager abholen und die angezeigte Pauschale bezahlen: standardmäßig 1 Euro pro angefangenem Minecraft-Tag und eingelagertem Buchungspaket. Alternativ die Entsorgung bestätigen. Nach 7 Minecraft-Tagen werden nicht abgeholte Sachen automatisch vernichtet."
+          ],
+          [
+            "5. Großes Hotel erhalten",
+            "Bereits gesetzte kleine Hotels werden nicht auf Kosten ihrer Umgebung automatisch vergrößert. Alle Buchungen und Fundsachen abschließen, Fässer leeren und Bewohner sowie lose Gegenstände entfernen. Mit leerer Haupthand Umschalt + Rechtsklick auf das Außenschild: Hotel einpacken. Danach mit der neuen JAR auf ausreichend großer freier Fläche erneut setzen."
+          ],
+          [
+            "Hilfe & Einstellungen",
+            "/ngcity anleitung gibt ein neues Buch; /ngcity startkiste meldet Administratoren den gemeinsamen Kistenstatus. Preise und Limits stehen in <Welt>/serverconfig/ng_city-server.toml in 10-Cent-Einheiten. NG-Verkehr und NG-Fahrzeuge bleiben eigenständige Mods; ihre Wirtschaftsanbindung folgt gesondert. Einzelspieler vom Eigentümer bestätigt; Mehrspieler nach Interface-Umbau offen."
+          ]
+        ]
       ],
       [
-        "06 / Was noch festzulegen ist",
-        "Erster Funktionsumfang, Währung, Startguthaben, Konten oder Bargeld, Grundstücke, Stadtverwaltung, Unternehmen und Berufe sind noch offen. Auch Schnittstelle, Speicherung und Verhalten bei Ausfall oder Entfernung von NG-City müssen vereinbart werden."
+        "Ausrüstung & aktueller Prüfstand",
+        [
+          [
+            "Ausrüstung kaufen",
+            "Im Ankauf rechts oben „Ausrüstung kaufen“ öffnen. Zehn Artikel: Eisenhelm, Brustpanzer, Hose, Stiefel, Schwert, Spitzhacke, Axt, Schaufel, Hacke und Schild. Je Spieler und Teil einmal 5 Euro; alle zehn erstmals zusammen 50 Euro. Danach gilt der angezeigte reguläre Preis. Erstkäufe bleiben gespeichert."
+          ],
+          [
+            "Reguläre Preise",
+            "Helm 10 €, Brustpanzer 16 €, Hose 14 €, Stiefel 8 €, Schwert 8 €, Spitzhacke 12 €, Axt 12 €, Schaufel 6 €, Hacke 8 €, Schild 8 €. Zahlungsart unten links wählen; je Klick ein Teil. Kartenzahlungen verlangen jedes Mal die PIN. „Weiter“ zeigt weitere Artikel."
+          ],
+          [
+            "Ausbesserungen",
+            "Einpacken von der Eingangsstufe korrigiert. Mitarbeiter schauen zur Kundenseite. Sitzbänke in Bank und Hotelrezeption einen Block nach links versetzt. Größere Zimmer und neue Bänke bei älteren Gebäuden durch Einpacken und Neuaufstellen übernehmen."
+          ],
+          [
+            "Einzelspieler-Abnahme",
+            "Einzelspieler-Abnahme durch den Eigentümer am 19.10.2026 bestätigt: alle bisherigen NG-City-Funktionen getestet; gemeinsame Startkiste am Weltspawn gesetzt, alle Inhalte vorhanden und alle drei Gebäude baubar. Der Mehrspieler-Test folgt nach Abschluss des derzeitigen Minecraft-Interface-Umbaus."
+          ]
+        ]
       ]
-    ],
-    "checks": "Vor einer Freigabe sind die einzelnen Mods, Verkehr und Fahrzeuge gemeinsam ohne NG-City sowie alle drei Mods mit kompatibler Anbindung zu prüfen. Dazu gehören Mehrspieler, Neustart, dauerhafte Daten, fehlende Gegenstellen und der Schutz vor doppelten Zahlungen. Eine fehlgeschlagene oder unklare Zahlung darf nicht als bezahlt gelten.",
-    "limit": "Dieser Katalog dokumentiert die bestätigte Planung. Er ist keine Installations- oder Bedienungsanleitung für eine fertige Mod. Bestehende Verkehrs- und Fahrzeug-Builds sind damit noch nicht auf das neue Zielverhalten umgestellt.",
-    "testheading": "Spätere Prüfung und Freigabe",
-    "scopeheading": "Aktueller Stand",
-    "links": "Projekt und Kontakt",
-    "download": "PDF-Katalog herunterladen",
-    "nav": "Planung",
-    "more": "Weitere NG-Projekte",
-    "source": "Maßgebliche öffentliche Grundlagenplanung:",
-    "pdf": "NG-City-Katalog-DE.pdf"
+    ]
   },
   "en": {
-    "tag": "PROJECT CATALOGUE · PLANNING STATUS",
-    "title": "The foundation for your city.",
-    "intro": "NG-City is intended to provide the shared foundation for the NeverGate city and its economy. Traffic, vehicles and future extensions can connect to it.",
-    "status": "Planning · 18 October 2026 · No mod build available",
-    "sections": [
+    "tag": "WEB CATALOGUE & USER MANUAL",
+    "title": "Your city starts here.",
+    "intro": "Placeable buildings, bank accounts, NG cash, inventory buyback and hotel rentals for Minecraft 1.20.2 with Forge 48.1.0 and Java 17.",
+    "status": "dev-0.0.2 · 19.10.2026 · Owner-confirmed single-player test passed; multiplayer after interface rebuild",
+    "pages": [
       [
-        "01 / Goal",
-        "Build a complete Minecraft city step by step: NG-City connects economic operations across participating NG projects through one shared foundation."
+        "Features & buildings",
+        [
+          [
+            "Bank",
+            "Open an account with the bank employee: one-time starting balance of EUR 250. Personal credit card with a four-digit PIN, wallet with 54 cash slots, and an ATM for deposits and withdrawals."
+          ],
+          [
+            "Buyback shop",
+            "Sell vanilla blocks and selected resources straight from your player inventory. Material- and recipe-based prices; cash or account credit. Both share a EUR 2,000 limit per player over a rolling one-hour window."
+          ],
+          [
+            "Hotel",
+            "Two separately locked rooms, reception, indoor staircase, payment terminal, room display and lost-property storage. Book 1 to 7 Minecraft days at EUR 5 per day."
+          ],
+          [
+            "Larger hotel rooms",
+            "New hotels have a 19 × 19 block footprint and are 11 blocks tall. Room 1 measures 6 × 10 blocks inside; room 2 measures 7 × 10. Beds and barrels are placed to the side or towards the back, leaving a clear route behind each room door."
+          ],
+          [
+            "Preview & packing",
+            "Hold a building kit to see its outline, entrance and dimensions. Pack unchanged, empty buildings through the exterior sign. Placement and preview use the same blueprint."
+          ],
+          [
+            "Digital menus",
+            "Banking, selling, ATM and hotel use digital control panels. The ATM and hotel terminal have modern custom models. Enter the PIN using mouse or keyboard."
+          ]
+        ]
       ],
       [
-        "02 / Three independent mods",
-        "NG-City, NG-Verkehr and NG-Fahrzeuge remain separate projects and JAR files. NG-Verkehr and NG-Fahrzeuge must continue to work independently without NG-City."
+        "Items & devices",
+        [
+          [
+            "Building kits",
+            "The shared chest near world spawn contains one bank kit, hotel kit, shop kit and starter guide. No personal crates and no refills."
+          ],
+          [
+            "Personal items",
+            "Wallet, credit card and room key. Wallets and cards belong to a player UUID. A room key matches its player, hotel, room and active booking."
+          ],
+          [
+            "Coins",
+            "10 cents, 20 cents, 50 cents, EUR 1 and EUR 2. Every denomination has separate front and back textures."
+          ],
+          [
+            "Banknotes",
+            "EUR 10, EUR 20 and EUR 50, each with front and back textures. All monetary values are NG in-game currency. No 1-, 2- or 5-cent coins and no EUR 5 banknote."
+          ],
+          [
+            "Devices & blocks",
+            "ATM, payment terminal, lost-property storage, hotel room display and locked room door. Hotel devices must belong to a registered hotel."
+          ]
+        ]
       ],
       [
-        "03 / Economy requires NG-City",
-        "Economic features are active only when NG-City is actually installed and its integration is available. Without NG-City, the traffic and vehicle mods have no active money accounts, economic prices, fees, payments or substitute currency."
+        "Instructions: getting started & banking",
+        [
+          [
+            "1. Install",
+            "Replace the previous NG-City JAR with the new file. Keep only one NG-City version in the mods folder. Forge servers and clients need the same mod. Back up your world before switching."
+          ],
+          [
+            "2. Shared starter chest",
+            "One shared chest near world spawn contains the bank, hotel and shop kits plus guide. Login chat gives its coordinates. No personal starter crates or refills. Worlds that received starter sets under the old system do not receive another set."
+          ],
+          [
+            "3. Place a building",
+            "Hold a kit and inspect the preview. Right-click the top of solid ground; the entrance faces you. The entire site must be empty, loaded, supported and buildable. The bank and shop each require 11 × 10 × 6 blocks; the new hotel requires 19 × 20 × 11, including the entrance step."
+          ],
+          [
+            "4. Account & wallet",
+            "Right-click the bank employee and choose to open an account. Right-click your wallet to open it; it accepts NG cash only. The bank replaces lost cards and wallets. A replacement card disables the previous card and needs a new PIN at the ATM; a replacement wallet accesses the same stored cash."
+          ],
+          [
+            "5. ATM",
+            "Keep your valid personal card in your inventory. Right-click the ATM. On your first visit, choose four digits using the number buttons and confirm with green; the PIN is saved on your card. Enter it again on every later visit. Then select a denomination or EUR 10/20/50/100. Cash appears in your inventory. The deposit button deposits all loose NG cash from your inventory; take cash out of your wallet first."
+          ]
+        ]
       ],
       [
-        "04 / Shared responsibilities",
-        "NG-City provides the central economic foundation. NG-Verkehr supplies roads and traffic technology; NG-Fahrzeuge supplies vehicles and vehicle features. Accounts and money movements are not maintained separately in every mod."
+        "Instructions: selling goods",
+        [
+          [
+            "1. Keep goods in your inventory",
+            "You do not put goods into a chest. Carry eligible vanilla blocks or resources in your normal inventory, then right-click the shop employee. A bank account is required."
+          ],
+          [
+            "2. Check the offer",
+            "The menu lists your available goods with minimum quantity and payout. Hover over a goods icon to read its label. Use the arrows to switch pages when needed."
+          ],
+          [
+            "3. Choose payout",
+            "Use the bottom-left button to choose cash or account credit. Credit increases your account balance; cash goes into your inventory. The remaining shared hourly allowance appears at the top."
+          ],
+          [
+            "4. Left-click to sell",
+            "Left-clicking an icon immediately sells the largest matching quantity of that item within your remaining allowance. There is no custom quantity selector or extra confirmation. Store any quantity you want to keep outside your inventory before selling."
+          ],
+          [
+            "5. Automatic payment",
+            "Eligible quantities are removed from your inventory and paid. Insufficient minimum quantity or cash inventory space rejects the sale. Items with custom data and filled containers are not accepted."
+          ],
+          [
+            "Price examples & allowance",
+            "Default examples: 64 dirt = EUR 0.10; 32 stone = EUR 0.10; 1 diamond = EUR 5; 1 diamond block = EUR 45. Processed variants depend on recipes and materials. The offer shown in your world is authoritative. Cash and account sales share EUR 2,000 per rolling real hour; there is no midnight reset."
+          ]
+        ]
       ],
       [
-        "05 / Future integration examples",
-        "A parking facility from NG-Verkehr could process a payment through NG-City. A vehicle purchase could use the same central economy. These examples are not implemented or tested features."
+        "Instructions: hotel & replacing buildings",
+        [
+          [
+            "1. Book a room",
+            "Right-click reception or the hotel terminal. Choose payment at the bottom left, select a free room, adjust 1 to 7 days with minus/plus and click the payment-and-key button. Every card payment opens a fresh PIN prompt; enter four digits and confirm with green. Lost-property retrieval paid by card also requires the PIN each time. Set the initial PIN at an ATM first. Have a valid card and account funds, or enough cash and room for change."
+          ],
+          [
+            "2. Use your room",
+            "Hold the key in either hand and right-click your room door. It closes after two seconds. The room display shows free rooms in green, or the guest name and remaining days. Select your own booked room at reception to replace a lost key."
+          ],
+          [
+            "3. Booking expiry",
+            "Minecraft daytime counts, including skipped nights. At expiry the key becomes invalid and anyone still inside the room is moved to the lobby. You can discard the old key. Belongings left behind are stored."
+          ],
+          [
+            "4. Retrieve belongings",
+            "Retrieve items through reception or lost-property storage and pay the displayed fee: by default EUR 1 per started Minecraft day for each stored booking package. Alternatively confirm disposal. Unclaimed belongings are destroyed after 7 Minecraft days."
+          ],
+          [
+            "5. Get the larger hotel",
+            "Existing small hotels do not automatically expand into their surroundings. Finish bookings, retrieve belongings, empty barrels and remove occupants and dropped items. With an empty main hand, sneak and right-click the exterior sign to pack the hotel. With the new JAR installed, place the returned kit on a sufficiently large empty site."
+          ],
+          [
+            "Help & settings",
+            "/ngcity anleitung gives a new guide; /ngcity startkiste reports shared-crate status to administrators. Prices and limits are configured in <world>/serverconfig/ng_city-server.toml in ten-cent units. NG-Verkehr and NG-Fahrzeuge remain independent; economy integrations follow separately. Single-player accepted by the owner; multiplayer follows after the interface rebuild."
+          ]
+        ]
       ],
       [
-        "06 / Decisions still open",
-        "The first feature scope, currency, starting balance, accounts or cash, land ownership, city administration, businesses and jobs remain undecided. The integration interface, persistence and behaviour when NG-City fails or is removed must also be agreed."
+        "Equipment & current acceptance",
+        [
+          [
+            "Buy equipment",
+            "Open Buy equipment at the top right of the shop menu. Ten items: iron helmet, chestplate, leggings, boots, sword, pickaxe, axe, shovel, hoe and shield. Each player gets each item once for EUR 5; the first complete set is EUR 50. Later purchases use the displayed regular price. First purchases persist."
+          ],
+          [
+            "Regular prices",
+            "Helmet EUR 10, chestplate 16, leggings 14, boots 8, sword 8, pickaxe 12, axe 12, shovel 6, hoe 8, shield 8. Choose cash or card at the bottom left; one item per click. Each card purchase requires the PIN. Next displays more items."
+          ],
+          [
+            "Corrections",
+            "Packing from the entrance step fixed. Employees face customers. Bank and hotel reception benches moved one block left. Pack and replace older buildings to get larger rooms and shifted benches."
+          ],
+          [
+            "Single-player acceptance",
+            "On 19 October 2026 the owner confirmed all current NG-City features tested in single-player: shared chest placed near world spawn, all contents present and all three buildings placeable. Multiplayer testing follows after the ongoing Minecraft interface rebuild. No MC02 deployment or joint economy integration acceptance."
+          ]
+        ]
       ]
-    ],
-    "checks": "Before approval, test the individual mods, traffic and vehicles together without NG-City, and all three mods with compatible integration. Include multiplayer, restarts, persistent data, missing counterparts and prevention of duplicate payments. A failed or uncertain payment must never be treated as paid.",
-    "limit": "This catalogue documents confirmed planning. It is not an installation or user manual for a finished mod. Existing traffic and vehicle builds have not automatically been adapted to the new target behaviour.",
-    "testheading": "Future testing and approval",
-    "scopeheading": "Current status",
-    "links": "Project and contact",
-    "download": "Download PDF catalogue",
-    "nav": "Planning",
-    "more": "More NG projects",
-    "source": "Authoritative public foundation plan:",
-    "pdf": "NG-City-Katalog-EN.pdf"
+    ]
   }
 }

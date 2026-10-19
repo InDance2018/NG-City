@@ -51,3 +51,14 @@ Minecraft 1.20.2 / Forge 48.1.0, Java 17, Version `dev-0.0.1`.
 Erste Mitarbeiterinteraktion: Übersicht des jeweiligen Gebäudes. Konten, Währung, Preise, Warenannahme und Zimmervermietung sind noch nicht festgelegt und werden nicht vorgetäuscht. Die Mod ist eine Gebäudegrundlage; sie ist noch kein aktiver Wirtschafts- oder Zahlungsanbieter. NG-Verkehr und NG-Fahrzeuge werden durch diesen Bauauftrag nicht verändert.
 
 Umsetzung, Build, Spieltests, Installation und Veröffentlichung werden in `DEV-0.0.1.md` getrennt dokumentiert. Öffentliche Ankündigung: [Issue 1](https://github.com/InDance2018/NG-City/issues/1). Keine MC02-Installation durch diesen Auftrag.
+
+
+## dev-0.0.2 · Eigentümerfreigabe vom 19.10.2026, 16:20 CEST
+
+Der gemeinsam besprochene Gesamtumfang ist zur Umsetzung freigegeben: Bankkonto, UUID-gebundene Geldbörse/Karte, Geldautomat und NG-Bargeld (10/20/50 Cent, 1/2 Euro sowie 10/20/50 Euro), Vanilla-Ankauf, Hotelzahlung, Zimmerdisplay, persönliche zeitgebundene Schlüssel und Fundsachenverwaltung sowie Vorschau/Einpacken. Als konfigurierbare Testvorgaben gelten die vorgeschlagenen 250 Euro Start, 500 Euro Ankauf/24 Echtstunden, Hotel 5 Euro/MC-Tag und Aufbewahrung 1 Euro/MC-Tag. Implementierungs- und Prüfnachweise in DEV-0.0.2.md. Nur Einzelspieler-Nutzerprüfung; keine MC02-Installation. GitHub-Fortschreibung dieses Folgeauftrags noch nicht erfolgt.
+
+## Aktueller Entwicklungsstand · 19.10.2026
+
+Der freigegebene dev-0.0.2-Umfang einschließlich der Folgekorrekturen ist umgesetzt und als Entwicklungs-JAR bereitgestellt. Einzelspieler-Abnahme durch den Eigentümer am 19.10.2026 bestätigt: alle bisherigen NG-City-Funktionen getestet; gemeinsame Startkiste am Weltspawn gesetzt, alle Inhalte vorhanden und alle drei Gebäude baubar. Der Mehrspieler-Test folgt nach Abschluss des derzeitigen Minecraft-Interface-Umbaus.
+
+Aktuelle Funktionen, Preise und Korrekturen: [CHANGELOG-dev-0.0.2.md](CHANGELOG-dev-0.0.2.md). Historische Testvorgaben oben sind überholt: aktuelles Ankaufslimit 2.000 Euro je Echtstunde; gemeinsame Spawnkiste und Ausrüstungskauf enthalten. Modübergreifende Wirtschaft bleibt offen.

@@ -1,6 +1,7 @@
 package de.nevergate.city;
 
 import java.util.*;
+import de.nevergate.city.economy.CityBlocks;
 import net.minecraft.core.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
@@ -9,10 +10,17 @@ import net.minecraft.world.level.block.state.properties.*;
 /** Complete footprint includes interior air: preflight protects the whole building volume. */
 public final class BuildingPlan {
     public final BuildingKind kind;
+    public final int width, depth;
     public final Map<BlockPos, BlockState> blocks = new LinkedHashMap<>();
-    public BuildingPlan(BuildingKind kind) {
+    public BuildingPlan(BuildingKind kind) { this(kind,3); }
+    public BuildingPlan(BuildingKind kind,boolean legacy) {
+        this(kind,legacy?0:3);
+    }
+    public BuildingPlan(BuildingKind kind,int layout) {
         this.kind = kind;
-        int w = kind.width, d = kind.depth, h = kind.height;
+        boolean legacy=layout==0, spacious=layout>=2;
+        int w = kind==BuildingKind.HOTEL&&!spacious?13:kind.width, d = kind==BuildingKind.HOTEL&&!spacious?13:kind.depth, h = kind.height;
+        width=w; depth=d;
         BlockState wall = (kind == BuildingKind.BANK ? Blocks.SMOOTH_QUARTZ : kind == BuildingKind.HOTEL ? Blocks.WHITE_CONCRETE : Blocks.BRICKS).defaultBlockState();
         for (int x=0; x<w; x++) for (int z=0; z<d; z++) for (int y=0; y<h; y++) {
             BlockState s = Blocks.AIR.defaultBlockState();
@@ -40,7 +48,8 @@ public final class BuildingPlan {
         if (kind==BuildingKind.BANK) {
             for (int x=1;x<4;x++) { put(x,1,d-2,Blocks.BARREL); put(x,2,d-2,Blocks.IRON_BLOCK); }
             put(w-2,1,d-2,Blocks.ENDER_CHEST);
-            seats(w-3,2);
+            seats(w-3+(layout>=3?1:0),2);
+            if(!legacy)put(8,1,6,CityBlocks.ATM.get().defaultBlockState().setValue(CityBlocks.FACING,Direction.NORTH));
         } else if (kind==BuildingKind.BUYER) {
             for (int x=1;x<4;x++) put(x,1,d-2,Blocks.BARREL);
             put(w-2,1,d-2,Blocks.CRAFTING_TABLE);
@@ -54,14 +63,19 @@ public final class BuildingPlan {
                 put(x,z-1,z,Blocks.OAK_STAIRS.defaultBlockState().setValue(StairBlock.FACING,Direction.SOUTH));
                 for(int y=1;y<z-1;y++) put(x,y,z,Blocks.OAK_PLANKS);
             }
-            for(int x=3;x<w-1;x++) for(int y=6;y<=9;y++) put(x,y,4,Blocks.OAK_PLANKS);
-            for(int z=5;z<d-1;z++) for(int y=6;y<=9;y++) put(7,y,z,Blocks.OAK_PLANKS);
-            door(5,6,4,Direction.SOUTH); door(9,6,4,Direction.SOUTH);
-            bed(5,6,8); bed(9,6,8);
-            put(4,6,10,Blocks.BARREL); put(10,6,10,Blocks.BARREL);
-            put(4,9,7,Blocks.SEA_LANTERN); put(10,9,7,Blocks.SEA_LANTERN);
+            for(int x=3;x<w-1;x++) for(int y=6;y<=9;y++) put(x,y,legacy?4:7,Blocks.OAK_PLANKS);
+            for(int z=legacy?5:8;z<d-1;z++) for(int y=6;y<=9;y++) put(spacious?10:7,y,z,Blocks.OAK_PLANKS);
+            door(spacious?6:5,6,legacy?4:7,Direction.SOUTH); door(spacious?14:9,6,legacy?4:7,Direction.SOUTH);
+            if(!legacy)for(int z=8;z<d-1;z++)for(int y=6;y<=9;y++)put(3,y,z,Blocks.OAK_PLANKS);
+            bed(spacious?4:5,6,spacious?15:8); bed(spacious?16:9,6,spacious?15:8);
+            put(4,6,spacious?12:10,Blocks.BARREL); put(spacious?16:10,6,spacious?12:10,Blocks.BARREL);
+            put(spacious?6:4,9,spacious?12:7,Blocks.SEA_LANTERN); put(spacious?14:10,9,spacious?12:7,Blocks.SEA_LANTERN);
             put(1,9,7,Blocks.SEA_LANTERN);
-            seats(9,2);
+            seats(9+(layout>=3?1:0),2);
+            if(!legacy){for(int x:(spacious?new int[]{6,14}:new int[]{5,9})) for(int y:new int[]{6,7}){var old=blocks.get(new BlockPos(x,y,7));put(x,y,7,CityBlocks.ROOM_DOOR.get().defaultBlockState().setValue(DoorBlock.FACING,old.getValue(DoorBlock.FACING)).setValue(DoorBlock.HALF,old.getValue(DoorBlock.HALF)));}
+            put(6,2,7,CityBlocks.DISPLAY.get().defaultBlockState().setValue(CityBlocks.FACING,Direction.NORTH));
+            put(spacious?10:7,2,4,CityBlocks.TERMINAL.get().defaultBlockState().setValue(CityBlocks.FACING,Direction.NORTH));
+            put(3,1,7,CityBlocks.LUGGAGE.get().defaultBlockState().setValue(CityBlocks.FACING,Direction.NORTH));}
         }
     }
     private void seats(int x,int z) {
@@ -84,12 +98,12 @@ public final class BuildingPlan {
         return switch(into) { case WEST -> Rotation.CLOCKWISE_90; case NORTH -> Rotation.CLOCKWISE_180; case EAST -> Rotation.COUNTERCLOCKWISE_90; default -> Rotation.NONE; };
     }
     public BlockPos worldPos(BlockPos origin,Direction into,BlockPos local) {
-        return local.offset(-kind.width/2,0,0).rotate(rotation(into)).offset(origin);
+        return local.offset(-width/2,0,0).rotate(rotation(into)).offset(origin);
     }
     public Map<BlockPos,BlockState> transformed(BlockPos origin,Direction into) {
         Map<BlockPos,BlockState> result = new LinkedHashMap<>();
         blocks.forEach((p,s)-> result.put(worldPos(origin,into,p),s.rotate(rotation(into))));
         return result;
     }
-    public BlockPos employeePos(BlockPos origin,Direction into) { return worldPos(origin,into,new BlockPos(kind.width/2,1,5)); }
+    public BlockPos employeePos(BlockPos origin,Direction into) { return worldPos(origin,into,new BlockPos(width/2,1,5)); }
 }

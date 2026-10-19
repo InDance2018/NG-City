@@ -1,0 +1,16 @@
+{"name":"ng_city_shared.playerloginsandadmincommandnevergivepersonalcrates","status":"passed"}
+{"name":"ng_city_shared.oldpersonalcrateitemcannotmakeanotherset","status":"passed"}
+{"name":"ng_city_packfix.hotelfromporch","status":"passed"}
+{"name":"ng_city_packfix.hotelsettled","status":"passed"}
+{"name":"ng_city_packfix.bankfromporch","status":"passed"}
+{"name":"ng_city_packfix.buyersettled","status":"passed"}
+{"name":"ng_city_packfix.banksettled","status":"passed"}
+{"name":"ng_city_packfix.buyerfromporch","status":"passed"}
+{"name":"ng_city_packfix.employeesfacecustomersinalldirections","status":"passed"}
+{"name":"ng_city_packfix.existingemployeedirectionrecoveredfromsign","status":"passed"}
+{"name":"ng_city_packfix.benchesmoveoneblockleftfromentrance","status":"passed"}
+{"name":"ng_city_packfix.oldbankcanstillbepacked","status":"passed"}
+{"name":"ng_city_shared.unsafeplacementneverconsumesgrantoroverwrites","status":"passed"}
+{"name":"ng_city_shared.sharedcrateneverrefillsorrespawns","status":"passed"}
+{"name":"ng_city_shared.sharedledgerandlegacyrecipientssurvivediskreload","status":"passed"}
+{"complete":true}

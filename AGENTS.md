@@ -1,6 +1,6 @@
 # Arbeitsanweisung · NG-City
 
-Vor Änderungen die aktuelle README.md und PLANUNG.md lesen. NG-City dev-0.0.1 wurde am 19.10.2026 ausdrücklich zum Modbau beauftragt; aktuellen Nachweis in DEV-0.0.1.md lesen. Dokumentation ist keine Erlaubnis für Modbau, Installation oder Release-Veröffentlichung.
+Vor Änderungen die aktuelle README.md und PLANUNG.md lesen. NG-City dev-0.0.1 wurde am 19.10.2026 ausdrücklich zum Modbau beauftragt; aktuellen Nachweis in DEV-0.0.1.md und den freigegebenen Gesamtumfang dev-0.0.2 in DEV-0.0.2.md lesen. Dokumentation ist keine Erlaubnis für Modbau, Installation oder Release-Veröffentlichung.
 
 NG-Verkehr und NG-Fahrzeuge bleiben eigenständig ohne NG-City nutzbar. Wirtschaftsfunktionen greifen ausschließlich mit zusätzlich installierter NG-City; keine Ersatzwirtschaft ohne NG-City implementieren.
 

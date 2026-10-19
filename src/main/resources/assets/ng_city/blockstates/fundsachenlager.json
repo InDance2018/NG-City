@@ -1,0 +1,1 @@
+{"variants": {"facing=north": {"model": "ng_city:block/fundsachenlager", "y": 0}, "facing=east": {"model": "ng_city:block/fundsachenlager", "y": 90}, "facing=south": {"model": "ng_city:block/fundsachenlager", "y": 180}, "facing=west": {"model": "ng_city:block/fundsachenlager", "y": 270}}}

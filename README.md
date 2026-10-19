@@ -1,46 +1,64 @@
 # NG-City
 
-Minecraft **1.20.2**, **Forge 48.1.0**, **Java 17** · **dev-0.0.1**
+Stadt- und Wirtschaftsmod für **Minecraft 1.20.2 / Forge 48.1.0 / Java 17**. Aktuelle Entwicklung: **dev-0.0.2** (intern `0.0.2-dev`).
 
-Die erste NG-City-Entwicklungsversion liefert drei kompakte, fertig platzierbare und begehbare Gebäude mit Inneneinrichtung und interaktiven Mitarbeitern: **Bank**, **Hotel** und **Ankauf**.
+## Enthalten
+
+- Startkiste und Anleitung; begehbare Bank, Hotel und Ankauf mit Mitarbeitern.
+- Maßhaltige Bauvorschau und vollständiges Einpacken unveränderter Gebäude per leerer Haupthand, Umschalt + Rechtsklick aufs Außenschild.
+- Bankkonto, persönliche Geldbörse und Kreditkarte, Geldautomat, NG-Münzen und Scheine mit getrennten Vorder-/Rückseiten.
+- Vanilla-Ankauf mit materialbezogenen Preisen, gemeinsamen Auszahlungslimit und Wahl zwischen Bargeld und Kontogutschrift.
+- Hotel mit zwei abschließbaren Zimmern, Zahlungsterminal, großer Zimmerübersicht, maximal sieben Minecraft-Tagen Buchungsdauer und persönlichem Schlüssel.
+- Fundsachenlager: höchstens sieben Minecraft-Tage, kostenpflichtige Abholung oder bestätigte Entsorgung.
 
 ## Einstieg
 
-Beim ersten Eintritt erhält jeder Spieler eine Startkiste als Item. Auf einen freien Boden setzen und öffnen: Darin liegen die drei Gebäudepakete und eine Bedienungsanleitung als Buch. Bei vollem Inventar wird die Vergabe beim nächsten Eintritt erneut versucht.
+1. Die alte NG-City-JAR durch dev-0.0.2 ersetzen, keine zwei Versionen gleichzeitig laden.
+2. Eine Welt mit Forge 48.1.0 öffnen; am Weltspawn steht eine gemeinsame Startkiste mit den drei Gebäudepaketen und dem Buch. Die Koordinaten stehen beim Eintritt im Chat. Bestehende unveränderte dev-0.0.1-Gebäude können weiterverwendet werden.
+3. Beim Bankpersonal ein Konto eröffnen. Geldbörse und Karte werden an deine Spieler-UUID gebunden.
+4. Am Ankauf Waren aus dem Inventar verkaufen, am Geldautomaten Geld abheben und im Hotel bar oder mit Karte buchen. Den Schlüssel zum Öffnen in die Hand nehmen.
 
-Gebäudepaket in die Hand nehmen und auf die Oberseite eines festen Bodens klicken. Der Eingang zeigt zum Spieler; das Gebäude entsteht dahinter. Einige Blöcke Abstand halten. Bank und Ankauf benötigen 11 × 10 × 6 freie Blöcke inklusive Eingangsstufe, das Hotel 13 × 14 × 11. Alle Grundflächen müssen getragen sein. Platzierung funktioniert in vier Richtungen und prüft geladene Chunks, Bauhöhe, Weltgrenze, Baurechte, vorhandene Blöcke, Flüssigkeiten und Lebewesen. Bestehende Bauten werden nicht überschrieben. Forge-Platzierungsereignisse können den Bau abbrechen; die erfassten Blöcke werden dann wiederhergestellt.
+Testwerte: 250 Euro einmaliges Startguthaben; 2.000 Euro Ankaufserlös pro rollierender Echtstunde; Hotel 5 Euro pro Minecraft-Tag; Aufbewahrung 1 Euro pro angefangenem Minecraft-Tag. Konfigurierbar in `<Welt>/serverconfig/ng_city-server.toml`, jeweils in Zehn-Cent-Einheiten. Alle Preise sind NG-Spielwährung.
 
-Die Gebäude bestehen nach dem Setzen aus normalen Minecraft-Blöcken. Ein automatisches Einpacken oder Entfernen gibt es nicht. Rechtsklick auf einen Mitarbeiter öffnet eine schreibgeschützte Gebäudeübersicht. Die Mitarbeiter bleiben an ihrem Arbeitsplatz.
+Die Hotelzeit folgt der Minecraft-Tageszeit einschließlich übersprungener Nächte. Nach Ablauf wird der Schlüssel ungültig. Beim Hotelpersonal oder Fundsachenlager kannst du zurückgelassene Gegenstände abholen; nach sieben Minecraft-Tagen werden sie vernichtet.
 
-- **Bank:** Schalter, Sitzbereich und Tresor-/Lagerbereich.
-- **Hotel:** Rezeption, Innentreppe und zwei Zimmer mit Betten im Obergeschoss.
-- **Ankauf:** Annahmetheke und Lager.
-- `/ngcity anleitung`: neues Handbuch.
-- `/ngcity startkiste`: weitere Kiste für Administratoren (Berechtigungsstufe 2).
-- Kreativmenü: eigener Tab **NG-City**.
+## Nachweise und Grenzen
 
-## Installation und Entwicklung
+[DEV-0.0.2.md](DEV-0.0.2.md) beschreibt den Umfang, die Testvorgaben und die Prüfnachweise. 79 eindeutige Forge-GameTest-Fälle über Gesamt- und gezielte Suiten abgedeckt; genaue Laufgrenzen in docs/test-results/dev-0.0.2-shared-starter.json. Zuvor 2.104 Preisbündel-Prüfungen bestanden. Einzelspieler-Abnahme durch den Eigentümer am 19.10.2026 bestätigt: alle bisherigen NG-City-Funktionen getestet; gemeinsame Startkiste am Weltspawn gesetzt, alle Inhalte vorhanden und alle drei Gebäude baubar. Der Mehrspieler-Test folgt nach Abschluss des derzeitigen Minecraft-Interface-Umbaus. Keine MC02-Installation. Entwicklungsfassung, kein stabiler Release.
 
-Die Mod gehört auf Forge-Server **und** Clients. NG-Verkehr und NG-Fahrzeuge sind für diese Version nicht erforderlich. Nicht in einem laufenden Server austauschen. Diese erste Entwicklungsversion zunächst in einer gesicherten Testwelt prüfen.
+NG-Verkehr und NG-Fahrzeuge bleiben eigenständige Mods. Eine gemeinsame Zahlungsanbindung ist durch dev-0.0.2 nicht implementiert. [Planung](PLANUNG.md), [historischer Grundaufbau dev-0.0.1](DEV-0.0.1.md).
 
-Build: `./gradlew clean build` mit Java 17. Dateiversion: `dev-0.0.1`; Forge-interne Versionsnummer: `0.0.1-dev` (Forge verlangt eine führende Zahl).
-Server-Spieltests: `./gradlew -PcityQA runGameTestServer`.
-Produktions-JAR anschließend erneut ohne `cityQA` bauen: `./gradlew clean build`.
-Testquellen und Teststrukturen befinden sich ausschließlich in `src/qa` und werden ohne `cityQA` nicht gepackt.
+## Bauen
 
-[Entwicklungs- und Prüfnachweis](DEV-0.0.1.md) · [Planung](PLANUNG.md) · [Ankündigung](https://github.com/InDance2018/NG-City/issues/1)
+```sh
+./gradlew -PcityQA runGameTestServer
+./gradlew clean build
+```
 
-## Wirtschaft und weitere Mods
+`priceBundleTest` gehört zu `check`. QA-Quellen und die leere Teststruktur werden nicht in der Produktions-JAR ausgeliefert. Die Offline-Hilfen unter `tools/` wurden für die vorhandene eingeschränkte lokale Buildumgebung eingesetzt; sie ersetzen keine Entwicklungsabhängigkeiten im Repository.
 
-Konten, Geld, Ankaufspreise, Warenannahme und Zimmervermietung sind in dev-0.0.1 noch nicht aktiviert. Die Mitarbeiter zeigen den Entwicklungsstand; es wird keine Bezahlung oder erledigte Dienstleistung vorgetäuscht.
+## Vergrößerte Hotelzimmer
 
-NG-City bildet künftig die gemeinsame Stadt- und Wirtschaftsgrundlage. NG-Verkehr und NG-Fahrzeuge bleiben getrennte, eigenständig nutzbare Mods. Ihre spätere Wirtschaftsanbindung ist noch nicht implementiert oder gemeinsam geprüft. Weitere Projekte können später angebunden werden. [Grundlagenplanung](PLANUNG.md)
+Siehe [DEV-0.0.2-HOTEL1.md](DEV-0.0.2-HOTEL1.md). Neue Mietzimmer mit 60 bzw. 70 Blöcken Innenfläche. Alte Hotels können leer eingepackt und mit dem größeren Paket neu gesetzt werden. [Webkatalog und Bedienung](https://nevergate.de/ng-city/).
 
-## Webkatalog und PDF
+## Aktuelle dev-0.0.2-Korrekturen
 
-Die Kataloge vom 18.10.2026 beschreiben die damalige Planung und wurden durch diesen Modbau nicht neu veröffentlicht.
+[FIX-DEV-0.0.2.md](FIX-DEV-0.0.2.md): Einpacken auf der Eingangsstufe, Mitarbeiter-Ausrichtung, nach links versetzte Sitzbänke, 2.000 Euro Ankauf je Echtstunde und vierstellige PIN bei jeder Kartenzahlung. Die PIN erstmals am Geldautomaten festlegen. Dateiname bleibt ng_city-1.20.2-dev-0.0.2.jar.
 
-- [Zweisprachiger Webkatalog](https://nevergate.de/ng-city/)
-- [PDF-Katalog Deutsch](https://nevergate.de/ng-city/downloads/NG-City-Katalog-DE.pdf)
-- [PDF catalogue English](https://nevergate.de/ng-city/downloads/NG-City-Katalog-EN.pdf)
-- [Katalogquellen und PDF-Kopien](docs/catalog/)
+## Digitale Oberflächen
+
+[DIGITAL-DEV-0.0.2.md](DIGITAL-DEV-0.0.2.md): digitale Bedienfelder für Bank, Geldautomat, Verkauf und Hotel, PIN-Tastatureingabe sowie neue Geldautomaten- und Terminalmodelle. Bestehende Geräte verwenden die neue Darstellung nach dem JAR-Wechsel.
+
+## Ausrüstung im Ankauf
+
+[EQUIPMENT-DEV-0.0.2.md](EQUIPMENT-DEV-0.0.2.md): zehn Rüstungs-/Werkzeugangebote mit persönlichem Erstkaufpreis von je 5 Euro, danach freigegebenem regulärem Preis. Bar oder Karte mit PIN, Erstkäufe werden gespeichert.
+
+## Gemeinsame Startkiste
+
+[SHARED-STARTER-DEV-0.0.2.md](SHARED-STARTER-DEV-0.0.2.md): einmalige gemeinsame Kiste am Weltspawn statt persönlicher Starter. Keine erneute Vergabe bei neuen Spielern, leerer/zerstörter Kiste oder Neustart. Bereits nach altem Verfahren versorgte Welten erhalten kein zusätzliches Paket.
+
+## Download und aktuelle Abnahme
+
+[Entwicklungs-JAR dev-0.0.2](https://nevergate.de/ng-city/downloads/ng_city-1.20.2-dev-0.0.2.jar) · [Alle Funktionen und Ausbesserungen](CHANGELOG-dev-0.0.2.md) · [Einzelspieler-Abnahme](ABNAHME-2026-10-19.md)
+
+[Webkatalog DE/EN](https://nevergate.de/ng-city/) · [PDF Deutsch](https://nevergate.de/ng-city/downloads/NG-City-Katalog-DE.pdf) · [PDF English](https://nevergate.de/ng-city/downloads/NG-City-Katalog-EN.pdf)

@@ -1,0 +1,1 @@
+{"variants": {"facing=north": {"model": "ng_city:block/geldautomat", "y": 0}, "facing=east": {"model": "ng_city:block/geldautomat", "y": 90}, "facing=south": {"model": "ng_city:block/geldautomat", "y": 180}, "facing=west": {"model": "ng_city:block/geldautomat", "y": 270}}}

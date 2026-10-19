@@ -1,0 +1,13 @@
+# Gemeinsame Startkiste am Weltspawn · dev-0.0.2
+
+Eigentümerentscheidung vom 19.10.2026: eine feste gemeinsame Startkiste am Weltspawn mit genau einem Bank-, Hotel- und Ankaufpaket und einem Handbuch. Keine persönliche automatische Vergabe, kein Schutz vor gegenseitiger Entnahme, keine Auffüllung.
+
+Beim Serverstart wird in der Oberwelt ein freier, getragener Platz nahe dem Weltspawn gesucht. Auf dedizierten Servern liegt die Kiste außerhalb des konfigurierten Vanilla-Spawnschutzes, damit gewöhnliche Spieler sie öffnen können. Die Suche prüft 17 × 17 mögliche Spalten in Richtung Osten, beginnend knapp außerhalb des Schutzradius. Der Platz muss innerhalb der Weltgrenze liegen, zwei freie Blöcke über festem, trockenem Boden haben und darf nicht an eine andere Kiste grenzen. Es werden keine vorhandenen Blöcke oder Inventare überschrieben und keine Plattformen angelegt. Ist kein Platz geeignet, versucht der nächste Spielereintritt erneut die sichere Platzierung. Das Laden/Erzeugen der örtlichen Spawn-Chunks ist für die angeforderte Platzierung beabsichtigt.
+
+Die globale Vergabe und Kistenposition stehen in der bestehenden Oberweltdatei `ng_city_starters.dat`. Weitere Spieler, erneute Eintritte, andere Dimensionen, Tod und geänderter Weltspawn erzeugen keine weitere Kiste. Eine geleerte, verschobene oder abgebaute Kiste bleibt verbraucht. Beim Eintritt stehen die ursprünglichen Koordinaten im Chat. Es gibt weder Eigentümerreservierung noch Nachfüllung.
+
+Bestehende Welten mit früher gespeicherten persönlichen Empfängern gelten bereits als versorgt: kein zusätzliches Startpaket am Spawn. Vorhandene Gebäude und Gebäudepakete bleiben verwendbar. Das alte Startkisten-Item bleibt aus Speicherkompatibilität registriert, erzeugt aber keine weitere Startausstattung und wird nicht mehr im Kreativreiter angeboten. Der Administratorbefehl `/ngcity startkiste` meldet den Status bzw. versucht nur eine noch nicht erfolgte gemeinsame Platzierung; er gibt keine persönlichen Kisten mehr aus. Der Befehl funktioniert auch über die Konsole.
+
+Das Handbuch beschreibt die Spawnkiste als ersten Schritt. Neue Ausgabe über `/ngcity anleitung`. Kein Gebäude-Limit für absichtlich per Kreativmodus oder Administratorbefehl erzeugte Gebäudepakete; dieser Auftrag ersetzt die automatische Mehrfachvergabe. Keine Installation oder Veröffentlichung durch diesen Auftrag; die Freigabe für spätere Discord-/GitHub-Aktualisierungen steht weiterhin aus.
+
+Prüfnachweis: `docs/test-results/dev-0.0.2-shared-starter.json`. Grafischer Client-/Mehrspielerbetrieb und echtes vollständiges Serverneustart-Szenario bleiben gesonderte Abnahmen; native Weltdatenspeicherung wird automatisiert auf Datenträger geprüft.

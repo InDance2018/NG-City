@@ -42,6 +42,7 @@ public final class BuildingItem extends Item {
             level.sendBlockUpdated(signPos,level.getBlockState(signPos),level.getBlockState(signPos),3);
         }
         if(!level.addFreshEntity(npc)) { Placement.rollback(before); return InteractionResult.FAIL; }
+        if(kind==BuildingKind.HOTEL)de.nevergate.city.economy.HotelService.ensure(npc);
         if(!player.getAbilities().instabuild) ctx.getItemInHand().shrink(1);
         player.sendSystemMessage(Component.literal(kind.title+" aufgebaut. Der Eingang zeigt zu dir. Sprich den Mitarbeiter per Rechtsklick an."));
         return InteractionResult.CONSUME;

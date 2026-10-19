@@ -1,0 +1,30 @@
+{
+  "version": "0.0.2-dev-hotel1",
+  "sha256": "1b027208683f3609dbc05e64a2f46d6c22775be202237817c796a2a1d39d8d8e",
+  "hotel_footprint": [
+    19,
+    19,
+    11
+  ],
+  "room_interiors": [
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      10
+    ]
+  ],
+  "game_tests": {
+    "combined_pass": 51,
+    "combined_total": 52,
+    "combined_failure": "packing inventory fixture employee registration timing",
+    "packing_isolated_pass": 9,
+    "unique_covered": 52
+  },
+  "graphical_client_test": false,
+  "mc02_installed": false,
+  "github_updated": false,
+  "price_bundle_checks_passed": 2104
+}

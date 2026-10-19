@@ -1,0 +1,21 @@
+{
+  "date_utc": "2026-10-19T19:15:17.831601+00:00",
+  "version": "0.0.2-dev",
+  "filename": "ng_city-1.20.2-dev-0.0.2.jar",
+  "sha256": "955d3acae3b3ea1b004440de758ebff189fc5a54f6e4e5028ea0cd5dc72cf3ce",
+  "bytes": 1201552,
+  "changes": "Starter handbook: introduction, four ordered startup steps, digital menu instructions, replacement-book command",
+  "pages": 28,
+  "page_layout": "Conservative 19-character word wrapping, at most 14 lines per page; maximum six pixels per character fits 114-pixel book text width. Graphical client not run.",
+  "validation": {
+    "java17_forge4810_compile": true,
+    "archive_crc": true,
+    "only_changed_archive_entry": [
+      "de/nevergate/city/Guide.class"
+    ],
+    "game_tests_rerun": false,
+    "reason": "Handbook text only; all other 44 production classes and resources byte-identical to preceding digital build"
+  },
+  "previous_behavior_evidence": "dev-0.0.2-digital.json",
+  "deployment": "No server installation or public release"
+}

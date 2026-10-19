@@ -1,0 +1,38 @@
+{
+  "version": "0.0.2-dev",
+  "filename": "ng_city-1.20.2-dev-0.0.2.jar",
+  "sha256": "bb4199096a5ac5226f58adf5efc3cc251af5b14b551baaf2e60fe0d2d3192143",
+  "bytes": 1186479,
+  "date_utc": "2026-10-19T18:11:18.763639+00:00",
+  "production_classes": 42,
+  "tested_compiled_classes_match_unmapped_release": true,
+  "game_tests": {
+    "unique_passed_across_suites": 67,
+    "primary_suite": {
+      "passed": 66,
+      "total": 67,
+      "fixture_failure": "bankpacksintosinglekit: delayed employee registration"
+    },
+    "packing_after_fixture_wait_fix": {
+      "passed": 9,
+      "total": 9
+    },
+    "reports": [
+      "dev-0.0.2-combined-game-tests.ndjson",
+      "dev-0.0.2-packing-game-tests.ndjson"
+    ]
+  },
+  "price_checks_passed": 2104,
+  "buyback_limit_euros": 2000,
+  "buyback_window_real_minutes": 60,
+  "card_pin": {
+    "digits": 4,
+    "stored_on_card": true,
+    "initial_setup_at_atm": true,
+    "required_per_card_payment": true,
+    "atm_reentry_required": true
+  },
+  "graphical_client_acceptance": false,
+  "mc02_changed": false,
+  "github_published": false
+}
