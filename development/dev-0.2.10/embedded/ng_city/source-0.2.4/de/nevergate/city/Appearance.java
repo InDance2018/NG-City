@@ -1,0 +1,18 @@
+package de.nevergate.city;
+import de.nevergate.city.digital.*;import de.nevergate.city.economy.*;
+import java.util.*;import net.minecraft.core.*;import net.minecraft.server.level.*;import net.minecraft.world.entity.npc.Villager;import net.minecraft.world.level.block.*;import net.minecraft.world.level.block.state.BlockState;import net.minecraft.world.level.block.state.properties.SlabType;import net.minecraft.world.phys.shapes.VoxelShape;
+/** Visual layout v6: supply-row counters face their doors. Layouts 0..5 remain reproducible. */
+public final class Appearance {
+ public static void finishComplex(BuildingPlan p){if(p.layoutVersion<5)return;
+  p.blocks.put(new BlockPos(11,6,9),Blocks.f_50016_.m_49966_());p.blocks.put(new BlockPos(11,7,9),Blocks.f_50016_.m_49966_());
+  for(var o:ComplexPlan.OFFICES){var at=o.employee();Direction front=front(o.id(),at,p.layoutVersion);var side=front.m_122427_();var center=at.m_121945_(front);for(int i=-1;i<=1;i++){var t=center.m_5484_(side,i);p.blocks.put(t,Blocks.f_50745_.m_49966_());p.blocks.put(t.m_7494_(),Blocks.f_50016_.m_49966_());}if(o.id().equals("digital"))p.blocks.put(center.m_7494_(),DigitalBlocks.PANEL.get().m_49966_().m_61124_(CityBlocks.FACING,front));}
+  for(var s:ComplexPlan.SERVICES){int x=s.x()+s.kind().width/2;for(int dx=-2;dx<=2;dx++){p.blocks.put(new BlockPos(x+dx,0,s.z()-1),Blocks.f_50470_.m_49966_());p.blocks.put(new BlockPos(x+dx,0,s.z()-2),Blocks.f_50411_.m_49966_().m_61124_(SlabBlock.f_56353_,SlabType.TOP));}}
+ }
+ private static Direction front(String role,BlockPos pos,int layout){if(layout>=6&&(role.equals("lager")||role.equals("nahrung")))return Direction.SOUTH;return role.equals("digital")?Direction.WEST:pos.m_123343_()<8?Direction.SOUTH:Direction.NORTH;}
+ public static void alignAll(List<Villager> all,Direction into){for(var npc:all){var tag=npc.getPersistentData();String role=tag.m_128461_("ng_city_department");if(role.isEmpty())continue;var office=ComplexPlan.OFFICES.stream().filter(o->o.id().equals(role)).findFirst();if(office.isEmpty())continue;Direction look=BuildingPlan.rotation(into).m_55954_(front(role,office.get().employee(),tag.m_128451_("ng_city_complex_layout")));tag.m_128405_("ng_city_direction",look.m_122424_().m_122416_());Placement.alignEmployee(npc);}}
+ public static void hotelLayout(EconomyData.Hotel hotel,Villager npc){if(npc.getPersistentData().m_128451_("ng_city_layout")>=5&&hotel.layout==4)hotel.layout=npc.getPersistentData().m_128451_("ng_city_layout");}
+ public static BuildingPacking.Target resolve5(ServerLevel level,BlockPos origin,Direction into,BlockPos sign){for(int version:new int[]{6,5}){var g=PreviewGeometry.create(new BuildingPlan(BuildingKind.COMPLEX,version),origin,into);var all=ComplexPlacement.members(level,g);if(all.size()!=13)continue;var central=all.stream().filter(n->n.getPersistentData().m_128451_("ng_city_complex_layout")==version&&n.getPersistentData().m_128461_("ng_city_department").equals("zentrale")).findFirst();if(central.isPresent())return new BuildingPacking.Target(g,central.get(),sign);}return null;}
+ public static BuildingKind panelKind(ServerLevel l,BlockPos pos){if(!(l.m_7702_(pos) instanceof PanelEntity b))return null;if(b.title.equals("Bank"))return BuildingKind.BANK;if(b.title.equals("An- und Verkauf"))return BuildingKind.BUYER;if(b.title.equals("Hotel")||b.title.equals("NG Hotel · Rezeption"))return BuildingKind.HOTEL;return null;}
+ public static VoxelShape panelShape(BlockState state){Direction d=state.m_61143_(CityBlocks.FACING);return switch(d){case SOUTH->Block.m_49796_(1,3,0,15,13,1);case EAST->Block.m_49796_(0,3,1,1,13,15);case WEST->Block.m_49796_(15,3,1,16,13,15);default->Block.m_49796_(1,3,15,15,13,16);};}
+ private Appearance(){}
+}

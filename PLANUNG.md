@@ -1,3 +1,7 @@
+# Aktuelle Fortschreibung · 21.10.2026
+
+Maßgeblicher neuer Stand: [Planung vom 21.10.](PLANUNG-2026-10-21.md). Aktuelle Lieferung/Abnahme: [dev-0.2.10](DEV-0.2.10.md). Die nachfolgenden Abschnitte sind historische Entscheidungen und damalige Implementierungsstände. Der aktuelle Wirtschafts-/Grundausbauplan ersetzt widersprechende ältere Planannahmen.
+
 # NG-City · Grundlagenplanung
 
 Stand: 18.10.2026. Quelle: ausdrückliche Eigentümerentscheidungen im NG-City-Planungsgespräch vom 18.10.2026. Historischer Ausgangsstand: Planung vom 18.10.2026. Neuer Bauauftrag vom 19.10.2026 siehe unten.
