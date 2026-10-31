@@ -1,3 +1,7 @@
+# Abgleich · 31.10.2026
+
+[Heutiger Projektstatus](STATUS.md): dev-0.2.10 und Eigentümerabnahme vom 21.10. weiterhin letzter belegter Stand; reguläre Quellkonsolidierung, Bauamt/Strom/Straßenmodule und gemeinsame Mod-Wirtschaft offen. Die nachfolgende datierte Planung bleibt als Verlauf bestehen und belegt keinen neuen Implementierungsabschluss.
+
 # Aktuelle Fortschreibung · 21.10.2026
 
 Maßgeblicher neuer Stand: [Planung vom 21.10.](PLANUNG-2026-10-21.md). Aktuelle Lieferung/Abnahme: [dev-0.2.10](DEV-0.2.10.md). Die nachfolgenden Abschnitte sind historische Entscheidungen und damalige Implementierungsstände. Der aktuelle Wirtschafts-/Grundausbauplan ersetzt widersprechende ältere Planannahmen.

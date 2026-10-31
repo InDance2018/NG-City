@@ -1,6 +1,6 @@
 # NG-City
 
-**Aktueller ausgelieferter Entwicklungsstand: dev-0.2.10 · 21.10.2026**
+**Dokumentationsstand: 31.10.2026 · letzter belegter ausgelieferter Entwicklungsstand: dev-0.2.10 vom 21.10.2026**
 Minecraft 1.20.2 · Forge 48.1.0 · Java 17
 
 NG-City ist die Stadt- und Wirtschaftsgrundlage für NeverGate. Der begehbare Verwaltungskomplex besitzt vier Gebäudeflügel und 13 Mitarbeiter einschließlich Digitalzentrale. Bank, Handel/Ausrüstung und Hotel sind nutzbar; weitere Fachverwaltungen sind vorbereitet.
@@ -15,7 +15,9 @@ NG-City ist die Stadt- und Wirtschaftsgrundlage für NeverGate. Der begehbare Ve
 
 SHA-256: `c4522ac7916bd5b9934ef6510279e4c97365ce4146de8bf4b44d1f4cb757061f` · 1.381.931 Bytes.
 
-Der Eigentümer hat den bisherigen Umbau am 21.10.2026 im Singleplayer und Multiplayer bestätigt. dev-0.2.10 ist auf MC02 aktiviert und der Server online. Tiere/Monster im Bauplatz werden standardmäßig erst nach erfolgreichem Setzen entfernt; Spieler und Mitarbeiter bleiben geschützt. Es handelt sich um eine Entwicklungsfassung, keinen stabilen Release.
+Der Eigentümer hat den bisherigen Umbau am 21.10.2026 im Singleplayer und Multiplayer bestätigt. Die damalige Installation und Onlineprüfung sind im Bericht vom 21.10. dokumentiert; sie sind keine Aussage über eine heutige Serverbelegung. Tiere/Monster im Bauplatz werden standardmäßig erst nach erfolgreichem Setzen entfernt; Spieler und Mitarbeiter bleiben geschützt. Es handelt sich um eine Entwicklungsfassung, keinen stabilen Release.
+
+[Aktueller Funktions-/Prüfstand und offene Aufgaben](STATUS.md). Es gibt weiterhin keinen stabilen GitHub-Release. Eine neue gemeinsame Wirtschaftsabnahme liegt nicht vor.
 
 ## Einstieg
 
